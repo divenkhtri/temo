@@ -39,6 +39,9 @@ const settings = {
   speed: 500,
   slidesToShow: 2,
   slidesToScroll: 1,
+  autoplay: true, // Enable autoplay
+  autoplaySpeed: 5000, // Set autoplay speed in milliseconds (e.g., 5 seconds)
+
   responsive: [
     {
       breakpoint: 769,
@@ -75,7 +78,7 @@ const styles = {
   section: {
     pt: [12, null, null, null, 10, 14],
     pb: [8, null, null, null, 10, 14],
-    mt: 12
+    mt: 12,
   },
   heading: {
     textAlign: "center",
@@ -84,7 +87,7 @@ const styles = {
   headingText: {
     fontSize: [7, null, null, 8],
     fontWeight: "bold",
-    color: '#000',
+    color: "#000",
     mb: 3,
   },
   slider: {

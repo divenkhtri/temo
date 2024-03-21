@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { ThemeUIProvider, Flex } from "theme-ui";
 import { theme } from "../../theme/index.ts";
@@ -5,7 +6,11 @@ import { theme } from "../../theme/index.ts";
 import HeroBanner from "../../components/ProductPage/HeroBanner.jsx";
 import Footer from "../../components/footer/footer.js";
 import Header from "../../components/ProductPage/Productheader/header.js";
-import Dashboard from "../../components/ProductPage/Dashboard.jsx";
+import Services from "../../components/ProductPage/Services.jsx";
+import PremiumFeature from "../../components/ProductPage/PremiumFeature.jsx";
+import CleaningRules from "../../components/ProductPage/CleaningRules.jsx";
+import IntroVideo from "../../components/ProductPage/IntroVideo.jsx";
+import Faq from "../../components/ProductPage/FAQ.jsx";
 
 const ProductPage = () => {
   return (
@@ -24,7 +29,11 @@ const ProductPage = () => {
           }}
         >
           <HeroBanner />
-          <Dashboard />
+          <Services />
+
+          <CleaningRules />
+          <IntroVideo />
+          <Faq />
         </main>
         <Footer />
       </Flex>

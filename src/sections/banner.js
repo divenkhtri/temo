@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+"use client"
 import { useState } from 'react';
 import { rgba } from 'polished';
 import { jsx, Flex, Container, Heading, Text, Button } from 'theme-ui';
@@ -7,13 +8,13 @@ import Image from '../components/image';
 import Play from '../components/icons/play';
 import dynamic from 'next/dynamic';
 // import ModalVideo from 'react-modal-video';
+
 const ModalVideo = dynamic(
   () => {
     return import('react-modal-video');
   },
   { ssr: false }
 );
-import banner from '../assets/images/banner.png';
 
 const Banner = () => {
   const [videoOpen, setVideoOpen] = useState(false);
