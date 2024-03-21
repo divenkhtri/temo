@@ -40,7 +40,7 @@ const settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   autoplay: true, // Enable autoplay
-  autoplaySpeed: 5000, // Set autoplay speed in milliseconds (e.g., 5 seconds)
+  autoplaySpeed: 3000, // Set autoplay speed in milliseconds (e.g., 5 seconds)
 
   responsive: [
     {
@@ -78,7 +78,8 @@ const styles = {
   section: {
     pt: [12, null, null, null, 10, 14],
     pb: [8, null, null, null, 10, 14],
-    mt: 12,
+    mt: 7,
+    mb: '-2rem'
   },
   heading: {
     textAlign: "center",

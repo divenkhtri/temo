@@ -2,6 +2,7 @@
 import { jsx, Box, Button, Heading, Text } from "theme-ui";
 import { FaCircleCheck } from "react-icons/fa6";
 import { rgba } from "polished";
+import Link from "next/link";
 
 const PriceTable = ({ price }) => {
   return (
@@ -21,9 +22,12 @@ const PriceTable = ({ price }) => {
         <Text as="p" sx={styles.subtitle}>
           {price.subtitle}
         </Text>
+        <Link href='/Contact/page'>
+          
         <Button sx={styles.button} variant="text">
           {price.buttonText}
         </Button>
+        </Link>
       </Box>
       <Box as="ul" sx={styles.list}>
         {price?.features?.map((feat) => (

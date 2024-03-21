@@ -1,4 +1,4 @@
-import { Box, Container } from "theme-ui";
+import { Box, Container, Text } from "theme-ui";
 import SectionHeader from "../section-header";
 import Service from "../cards/service";
 
@@ -37,15 +37,36 @@ const services = [
   },
 ];
 
-
-const Services = () => {
+const AboutServices = () => {
   return (
     <Box as="section" id="services" sx={styles.section}>
       <Container>
-        <SectionHeader
-          title="Didn’t find what you were looking for?"
-          slogan="Here is a comprensive solution for your Operations"
-        />
+        <Box sx={{ mx: "auto", textAlign: "center" }}>
+          <Text
+            sx={{
+              color: "primary",
+              fontWeight: 500,
+              fontSize: 3,
+              lineHeight: 2.25,
+              mb: 10,
+            }}
+          >
+            FROM DATA TO OPERATIONAL MANAGEMENT TO GEN AI
+          </Text>
+          <Box>
+            <Text
+              sx={{
+                color: "heading",
+                fontWeight: [500, null, null, 700],
+                fontSize: "42px",
+                lineHeight: [1.33, 1.33, 2.08],
+                letterSpacing: [null, null, null, "heading"],
+              }}
+            >
+              The RGS Data Platfrom
+            </Text>
+          </Box>
+        </Box>
         <Box sx={styles.grid}>
           {services.map((service, i) => (
             <Service key={i} service={service} />
@@ -56,7 +77,7 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default AboutServices;
 
 const styles = {
   section: {

@@ -8,106 +8,128 @@ import SlickArrow from "../components/slick-arrow";
 const data = [
   {
     id: 1,
-    title: "Startup Pack",
-    subtitle: "For the startup team who work with new come data stack",
-    price: 25.99,
+    title: "BASIC",
+    subtitle: "For the small scale team who work with small data stack",
     isRecommended: false,
     buttonText: "Get Quotation",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "Ultimate access to all course, exercises and assessments",
+        title: "Process Upto 1 GB data",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `All Basic Connectors Availble.`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `Upto 5 Users Allowed`,
       },
       {
         id: 4,
-        isAvailable: false,
-        title: `Unlimited download of courses on the mobile app contents`,
+        isAvailable: true,
+        title: `Pick upto an 10 Dashboards`,
       },
       {
         id: 5,
+        isAvailable: true,
+        title: `Only Email Support Provided`,
+      },
+      {
+        id: 6,
         isAvailable: false,
-        title: `Download and print courses and exercises in PDF`,
+        title: `Generative-AI Models`,
       },
     ],
   },
   {
     id: 2,
-    title: "Premium Pack",
-    subtitle: "For the organization who work with new come data stack",
-    price: 29.99,
+    title: "ADVANCED",
+    subtitle: "For the organization who work with large data stack",
     isRecommended: true,
     buttonText: "Get Quotation",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "Ultimate access to all course, exercises and assessments",
+        title: "Process Upto 10 GB data",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `All 10 Connectors Availble.`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `Upto 10 Users Allowed`,
       },
       {
         id: 4,
         isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `All 50+ Dashboards`,
       },
       {
         id: 5,
         isAvailable: true,
-        title: `Download and print courses and exercises in PDF`,
+        title: `SSH/SSl +
+        Email & Live Chat Support`,
+      },
+      {
+        id: 6,
+        isAvailable: true,
+        title: `Only Requested Addons Models`,
+      },
+      {
+        id: 7,
+        isAvailable: false,
+        title: `All Generative-AI Models`
       },
     ],
   },
   {
     id: 3,
-    title: "Ultimate Pack",
-    subtitle: "For the ultimate company team who work with new come data stack",
-    price: 34.99,
+    title: "BUSINESS",
+    subtitle: "For the ultimate company team",
     isRecommended: false,
     buttonText: "Get Quotation",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "Ultimate access to all course, exercises and assessments",
+        title: "Process Upto 100 GB data",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `All Basic Connectors Availble + Custom Connectors.`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `Unlimited Users`,
       },
       {
         id: 4,
         isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `All 50+ Dashboards + Role Based Access Control`,
       },
       {
         id: 5,
         isAvailable: true,
-        title: `Download and print courses and exercises in PDF`,
+        title: `SSH/SSL +
+        Email & Live Chat Support 24 * 5`,
+      },
+      {
+        id: 6,
+        isAvailable: true,
+        title: `All Generative-AI Models
+        1. Menu Recommendation Model
+        2. Propensity Model
+        3. Promotion's Recommendation Engine`,
       },
     ],
   },
@@ -168,7 +190,6 @@ export default Pricing;
 const styles = {
   section: {
     pt: [6],
-    pb: [12, null, null, 15, 17],
   },
   container: {
     pl: 0,

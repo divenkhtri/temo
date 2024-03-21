@@ -1,28 +1,87 @@
-import React from 'react';
-import { Box, Text, Heading } from 'theme-ui';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, Box, Heading, Text, Image } from "theme-ui";
+import { LearnMore } from "./link";
 
-export default function SectionHeader({ title, slogan, isWhite }) {
+const SectionHeader = ({
+  title,
+  emoji,
+  slogan,
+  description,
+  learnMore,
+  moreLink,
+  ...props
+}) => {
   return (
-    <Box sx={{ variant: 'sectionHeader' }}>
-      <Text
-        as="p"
-        sx={{
-          variant: 'sectionHeader.subTitle',
-          color: isWhite ? 'white' : 'heading',
-          opacity: isWhite ? 0.7 : 1,
-        }}
-      >
-        {slogan}
-      </Text>
-      <Heading
-        as="h2"
-        sx={{
-          variant: 'sectionHeader.title',
-          color: isWhite ? 'white' : 'heading_secondary',
-        }}
-      >
-        {title}
+    <Box sx={styles.heading} {...props}>
+      <Heading as="h3" sx={styles.title}>
+        {emoji ? <span>{title}</span> : title}
+        {emoji && <Image src={emoji} alt="emoji" />}
       </Heading>
+      {slogan && (
+        <Text as="p" sx={styles.slogan}>
+          {slogan}
+        </Text>
+      )}
+      {description && (
+        <Text as="p" sx={styles.description}>
+          {description}
+        </Text>
+      )}
+      {learnMore && (
+        <LearnMore
+          path={moreLink ?? "#"}
+          sx={styles.learnMore}
+          label={learnMore ?? "Learn More"}
+        />
+      )}
     </Box>
   );
-}
+};
+
+export default SectionHeader;
+
+const styles = {
+  heading: {
+    mx: "auto",
+    textAlign: "center",
+  },
+  slogan: {
+    textAlign: "center",
+
+    color: "primary",
+    fontWeight: 500,
+    fontSize: 3,
+    lineHeight: 2.25,
+    mb: 10,
+  },
+  title: {
+    color: "heading",
+    fontWeight: [500, null, null, 700],
+    fontSize: [6, null, 7, 8],
+    lineHeight: [1.33, 1.33, 2.08],
+    letterSpacing: [null, null, null, "heading"],
+
+    img: {
+      ml: ["15px"],
+      position: "relative",
+      top: "8px",
+      maxWidth: [25, null, null, "100%"],
+    },
+  },
+  description: {
+    color: "heading",
+    fontSize: ["14px", null, "16px"],
+    lineHeight: [1.86, null, 2.2],
+    mt: [5],
+    maxWidth: 610,
+    m: ["10px auto 0"],
+  },
+  learnMore: {
+    mt: [3, null, null, 5],
+    fontSize: ["12px", null, null, "14px", "15px"],
+    svg: {
+      width: [14, null, null, 17],
+    },
+  },
+};

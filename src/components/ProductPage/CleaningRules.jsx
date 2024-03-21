@@ -11,26 +11,26 @@ const data = [
   {
     id: 1,
     color: "#28D1DC",
-    value: "80K+",
-    title: "We have more than customers",
+    value: "50+",
+    title: "Key business operational dashboards",
   },
   {
     id: 2,
     color: "#FF753A",
-    value: "150+",
-    title: "Free online tutorials videos available",
+    value: "200+",
+    title: "Validation, Cleaning and Transformation Rules",
   },
   {
     id: 3,
     color: "#FA578E",
-    value: "90+",
-    title: "Daily updated blog post maintain",
+    value: "220+",
+    title: "Key business kep analytical charts",
   },
   {
     id: 4,
     color: "#28DCB2",
-    value: "& 3M",
-    title: "Job posted everyday`s with  qualification",
+    value: "& 99%",
+    title: "Fortify data security through a robust GCP infratructure",
   },
 ];
 
@@ -49,8 +49,8 @@ const CleaningRules = () => {
               sx={styles.heading}
               title={
                 <Fragment>
-                  Smart Jackpots <br />
-                  that you may love this anytime &amp; anywhere
+                  One Stop Solution <br />
+                  for your business &amp; operations
                 </Fragment>
               }
               description="Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever."
@@ -60,17 +60,24 @@ const CleaningRules = () => {
                 src={"/images/icons/check-circle-filled.png"}
                 alt="check icon"
               />
-              Unlimited design possibility
+              Get realtime insight of your business
             </Text>
             <Text sx={styles.listItem} as="p">
               <Image
                 src={"/images/icons/check-circle-filled.png"}
                 alt="check icon"
               />
-              Completely responsive features
+              Upscale your business operation using your data
+            </Text>
+            <Text sx={styles.listItem} as="p">
+              <Image
+                src={"/images/icons/check-circle-filled.png"}
+                alt="check icon"
+              />
+              Manage your inventory from anywhere
             </Text>
             <Box sx={styles.explore}>
-              <LearnMore path="#!" label="Contact Us" />
+              <LearnMore path="/Contact/page" label="Contact Us" />
             </Box>
           </Box>
         </Box>
@@ -83,7 +90,8 @@ export default CleaningRules;
 
 const styles = {
   contentWrapper: {
-    height: '100vh',
+    mt: '5rem',
+    height: "100vh",
     gap: [30, 30, 30, 30, 40, 60, 70, 120],
     display: ["flex", "flex", "grid"],
     flexDirection: ["column-reverse", "column-reverse", "unset"],
@@ -118,7 +126,7 @@ const styles = {
   heading: {
     textAlign: "left",
     mb: ["20px"],
-    mt: [0, 0, "-70px"],
+    mt: [0, 0, "-120px"],
     h2: {
       fontSize: ["28px", "28px", "28px", "28px", "36px", "40px"],
       lineHeight: [1.25, 1.5],
@@ -133,7 +141,7 @@ const styles = {
   },
   listItem: {
     fontWeight: 800,
-    lineHeight: 2.81,  
+    lineHeight: 2.81,
     display: "flex",
     alignItems: "center",
     img: {

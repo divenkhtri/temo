@@ -3,18 +3,19 @@ import React from "react";
 import { ThemeUIProvider, Flex } from "theme-ui";
 import { theme } from "../../theme/index.ts";
 
-import HeroBanner from "../../components/ProductPage/HeroBanner.jsx";
 import Footer from "../../components/footer/footer.js";
-import Header from "../../components/ProductPage/Productheader/header.js";
+import Header from "../../components/header/header";
 import Services from "../../components/ProductPage/Services.jsx";
 import PremiumFeature from "../../components/ProductPage/PremiumFeature.jsx";
 import CleaningRules from "../../components/ProductPage/CleaningRules.jsx";
 import IntroVideo from "../../components/ProductPage/IntroVideo.jsx";
 import Faq from "../../components/ProductPage/FAQ.jsx";
-import Glimpse from "../../components/ProductPage/Glimpse.jsx";
-import WorkFlow from "../../components/ProductPage/Workflow.jsx";
+import AboutHerobanner from "../../components/AboutPage/AboutHerobanner.jsx";
+import WhyUs from "../../components/AboutPage/WhyUs.jsx";
+import KeyFeature from "../../components/AboutPage/OurPromise.jsx";
+import AboutServices from "../../components/AboutPage/AboutService.jsx";
 
-const ProductPage = () => {
+const About = () => {
   return (
     <ThemeUIProvider theme={theme}>
       <Flex
@@ -30,11 +31,10 @@ const ProductPage = () => {
             variant: "layout.main",
           }}
         >
-          <HeroBanner />
-          <Services />
-          <Glimpse />
+          <AboutHerobanner />
+          <AboutServices />
+          <KeyFeature/>
           <CleaningRules />
-          <WorkFlow  />
           <IntroVideo />
           <Faq />
         </main>
@@ -43,4 +43,4 @@ const ProductPage = () => {
     </ThemeUIProvider>
   );
 };
-export default ProductPage;
+export default About;

@@ -16,11 +16,11 @@ const IntroVideo = () => {
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="Leading companies trust us to develop most powerful software with our talent team"
+          title="All in one platform for you day to day operation management"
           description="Every email, web page, and social media post makes an impression on your customers. With our software you can be confident it's impression."
         />
         <Box sx={styles.explore}>
-          <LearnMore path="#!" label="Explore More" />
+          <LearnMore path="/Pricing/page" label="Check Pricing" />
         </Box>
         <Box sx={styles.videoWrapper}>
           <Modal isOpen={isOpen}>
@@ -30,14 +30,14 @@ const IntroVideo = () => {
               color="#000"
             />
             <ResponsiveIframe
-              src="https://player.vimeo.com/video/394343710?autoplay=1&color=28DDB2&title=0&byline=0&portrait=0"
+              src="https://storage.googleapis.com/rgs-tech-website-video-files/updated.mp4"
               allow="autoplay; fullscreen"
               allowFullScreen
             />
           </Modal>
 
           <Image
-            src={"/images/video.png"}
+            src={"/images/videopic.png"}
             className="video-banner"
             alt="video banner"
           />

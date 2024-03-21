@@ -13,6 +13,6 @@ export default [
   },
   {
     path: '/Pricing/page',
-    label: 'Pricing',
+    label: 'Plan & Pricing',
   },
 ];

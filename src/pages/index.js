@@ -12,6 +12,7 @@ import UltimateFeatures from "../sections/ultimate-features";
 import Pricing from "../sections/pricing";
 import Featured from "../sections/features.js";
 import FAQ from "../components/ProductPage/FAQ.jsx";
+import TechUsed from "../sections/techUsed.js";
 
 const IndexPage = () => {
   return (
@@ -27,6 +28,7 @@ const IndexPage = () => {
         <Security />
         <Addons />
         <UltimateFeatures />
+        <TechUsed />
         <MobileApp />
         <Pricing />
         <FAQ />

@@ -49,15 +49,9 @@ const HeroBanner = () => {
           alt="banner icon"
           src={"/images/banner/dot-pattern.svg"}
         />
-
-        <Image
-          sx={styles.logo}
-          src={"/images/rgs.png"}
-          alt="logo image"
-        />
         <Heading as="h2">All in one Data platform for all your Restaurent Management</Heading>
         <Image
-          src={"/images/banner/banner-mockup.png"}
+          src={"/images/banner/banne.gif"}
           sx={styles.bannerImage}
           alt="banner moc"
         />
@@ -129,7 +123,6 @@ const bannerAnim3 = keyframes`
 
 const styles = {
   banner: {
-    pb: "10rem",
     overflow: "hidden",
     backgroundColor: "#F9FBFD",
     textAlign: "center",
