@@ -12,7 +12,7 @@ const IntroVideo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box as="section" sx={styles.section} variant="section.introVideo">
+    <Box as="section" sx={{ height: "100vh", marginTop: '5rem', marginBottom: '8rem' }} variant="section.introVideo">
       <Container>
         <SectionHeading
           sx={styles.heading}

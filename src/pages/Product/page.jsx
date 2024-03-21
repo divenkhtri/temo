@@ -30,7 +30,6 @@ const ProductPage = () => {
         >
           <HeroBanner />
           <Services />
-
           <CleaningRules />
           <IntroVideo />
           <Faq />

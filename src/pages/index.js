@@ -9,10 +9,9 @@ import Security from "../sections/security";
 import Addons from "../sections/addons";
 import MobileApp from "../sections/mobile-app";
 import UltimateFeatures from "../sections/ultimate-features";
-import Faq from "../sections/faq";
 import Pricing from "../sections/pricing";
 import Featured from "../sections/features.js";
-import WorkFlow from "../sections/workflow.js";
+import FAQ from "../components/ProductPage/FAQ.jsx";
 
 const IndexPage = () => {
   return (
@@ -30,7 +29,7 @@ const IndexPage = () => {
         <UltimateFeatures />
         <MobileApp />
         <Pricing />
-        <Faq />
+        <FAQ />
       </Layout>
     </ThemeUIProvider>
   );

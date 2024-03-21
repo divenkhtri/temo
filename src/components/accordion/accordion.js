@@ -1,6 +1,6 @@
-import React from 'react';
-import { Image } from 'theme-ui';
-import { BaseAccordion } from './base-accordion';
+import React from "react";
+import { Image } from "theme-ui";
+import { BaseAccordion } from "./base-accordion";
 
 import {
   AccordionButton,
@@ -9,11 +9,15 @@ import {
   single,
   preventClose,
   combineReducers,
-} from './shared';
+} from "./shared";
 
 export default function Accordion({ items, ...props }) {
-  const openIcon = <Image src={'/images/accordion-arrow.svg'} alt="open icon" />;
-  const closeIcon = <Image src={'/images/accordion-arrow-e.svg'} alt="close icon" />;
+  const openIcon = (
+    <Image src={"/images/accordion-arrow.svg"} alt="open icon" />
+  );
+  const closeIcon = (
+    <Image src={"/images/accordion-arrow-e.svg"} alt="close icon" />
+  );
   return (
     <BaseAccordion
       stateReducer={combineReducers(single, preventClose)}
@@ -32,6 +36,7 @@ export default function Accordion({ items, ...props }) {
                 </span>
                 {item.title}
               </AccordionButton>
+
               <AccordionContents isOpen={openIndexes.includes(index)}>
                 {item.contents}
               </AccordionContents>
