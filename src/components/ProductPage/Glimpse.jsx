@@ -41,14 +41,14 @@ const Glimpse = () => {
         as="figure"
         sx={{
           ...styles.illustration,
-          background: `url(${"/images/ipad.png"}) no-repeat`,
+          background: `url(${"/images/homescreen.png"}) no-repeat`,
         }}
       />
       <Container sx={styles.container}>
         <Box sx={styles.accordionGroup}>
           <SectionHeading
             sx={styles.heading}
-            slogan="Website content builder"
+            slogan="ALL-IN-ONE RGS Data PLATFORM"
             title="Meet our premium features that will make you wow"
             description="Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents."
           />
@@ -79,7 +79,7 @@ const styles = {
   illustration: {
     backgroundSize: [null, null, null, null, null, "62%", "50%", "66%", "62%"],
     "@media only screen and (min-width: 1601px)": {
-      backgroundSize: "60%",
+      backgroundSize: "80%",
       backgroundPosition: "0 0",
     },
     backgroundPosition: [
