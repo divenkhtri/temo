@@ -79,7 +79,6 @@ const styles = {
   illustration: {
     backgroundSize: [null, null, null, null, null, "62%", "50%", "66%", "62%"],
     "@media only screen and (min-width: 1601px)": {
-      backgroundSize: "80%",
       backgroundPosition: "0 0",
     },
     backgroundPosition: [

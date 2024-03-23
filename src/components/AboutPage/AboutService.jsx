@@ -1,7 +1,11 @@
-import { Box, Container, Text } from "theme-ui";
-import SectionHeader from "../section-header";
-import Service from "../cards/service";
-
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { Fragment } from "react";
+import { jsx, Box, Container, Grid } from "theme-ui";
+import TrackVisibility from "react-on-screen";
+import SectionHeading from "../section-heading";
+import Service from "./components/service";
+import StatItem from "./components/stat-item";
 const services = [
   {
     title: "Data Ingestion",
@@ -37,41 +41,98 @@ const services = [
   },
 ];
 
+const data = {
+  services: [
+    {
+      id: 1,
+      icon: "/images/services/1.png",
+      title: "Donate Blood",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+    {
+      id: 2,
+      icon: "/images/services/2.png",
+      title: "Pledge for cause",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+    {
+      id: 3,
+      icon: "/images/services/3.png",
+      title: "Life for a life",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+    {
+      id: 4,
+      icon: "/images/services/4.png",
+      title: "Volunteer with us",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+    {
+      id: 5,
+      icon: "/images/services/5.png",
+      title: "Partner with us",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+    {
+      id: 6,
+      icon: "/images/services/6.png",
+      title: "Help us for educational",
+      desc: `Get your info tests delivered at home collect a sample from the your task.`,
+      link: "#",
+    },
+  ],
+  stats: [
+    {
+      id: 1,
+      value: 50,
+      suffix: "+",
+      title: "Operational Dashboards",
+    },
+    {
+      id: 2,
+      value: 200,
+      suffix: "+",
+      title: "Transformation Rules",
+    },
+    {
+      id: 3,
+      value: 220,
+      suffix: "+",
+      title: "Business KPI",
+    },
+    {
+      id: 4,
+      value: 99,
+      suffix: "%",
+      title: "Fortify Data Security",
+    },
+  ],
+};
 const AboutServices = () => {
   return (
     <Box as="section" id="services" sx={styles.section}>
       <Container>
-        <Box sx={{ mx: "auto", textAlign: "center" }}>
-          <Text
-            sx={{
-              color: "primary",
-              fontWeight: 500,
-              fontSize: 3,
-              lineHeight: 2.25,
-              mb: 10,
-            }}
-          >
-            FROM DATA TO OPERATIONAL MANAGEMENT TO GEN AI
-          </Text>
-          <Box>
-            <Text
-              sx={{
-                color: "heading",
-                fontWeight: [500, null, null, 700],
-                fontSize: "42px",
-                lineHeight: [1.33, 1.33, 2.08],
-                letterSpacing: [null, null, null, "heading"],
-              }}
-            >
-              The RGS Data Platfrom
-            </Text>
-          </Box>
-        </Box>
-        <Box sx={styles.grid}>
-          {services.map((service, i) => (
-            <Service key={i} service={service} />
+        <SectionHeading
+          slogan="Service we work for"
+          title="What care we do for your family"
+        />
+        <Grid sx={styles.serviceGrid}>
+          {data.services.map((item) => (
+            <Service key={item.id} service={item} />
           ))}
-        </Box>
+        </Grid>
+        <Grid sx={styles.statsGrid}>
+          {data.stats.map((stat) => (
+            <TrackVisibility key={stat.id} once>
+              <StatItem stat={stat} />
+            </TrackVisibility>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );
@@ -81,22 +142,36 @@ export default AboutServices;
 
 const styles = {
   section: {
-    pt: [8, null, null, null, 10, 12],
-    pb: [12, null, null, null, null, 10],
+    pt: [8, null, null, 8, 10, null, 15],
+    pb: [7, null, null, null, 10, null, 14],
   },
-  grid: {
-    gap: [3, null, null, 4],
-    mt: 5,
-    display: "grid",
+  serviceGrid: {
+    backgroundColor: "white",
+    boxShadow: "0px 0px 25px rgba(54, 91, 125, 0.04)",
+    borderRadius: 10,
+    gap: [8, null, null, "60px 40px", "50px 30px", "60px 40px"],
     justifyContent: "center",
     gridTemplateColumns: [
-      "repeat(2, 1fr)",
+      "repeat(1, 250px)",
       null,
       null,
-      "repeat(3, 1fr)",
-      null,
-      "repeat(4, 1fr)",
-      "repeat(4, 300px)",
+      "repeat(2, 260px)",
+      "repeat(3, 258px)",
+      "repeat(3, 300px)",
     ],
+    pt: [8, null, null, 16],
+    pb: [8, null, null, 15],
+  },
+  statsGrid: {
+    gap: [6, null, null, "60px 30px", "60px 80px", "60px 110px"],
+    justifyContent: "center",
+    gridTemplateColumns: [
+      "repeat(2, 120px)",
+      null,
+      null,
+      "repeat(4, 130px)",
+      "repeat(4, 150px)",
+    ],
+    mt: [10],
   },
 };
