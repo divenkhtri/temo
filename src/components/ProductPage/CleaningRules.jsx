@@ -91,7 +91,6 @@ export default CleaningRules;
 const styles = {
   contentWrapper: {
     mt: '5rem',
-    height: "100vh",
     gap: [30, 30, 30, 30, 40, 60, 70, 120],
     display: ["flex", "flex", "grid"],
     flexDirection: ["column-reverse", "column-reverse", "unset"],

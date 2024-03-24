@@ -122,10 +122,12 @@ const styles = {
     },
     "&:nth-of-type(2n-1)::before": {
       backgroundImage: `url(${"/images/workflow/arrowOdd.png"})`,
+      animation: "moveArrow 2s linear infinite",
     },
     "&:nth-of-type(2n)::before": {
       backgroundImage: `url(${"/images/workflow/arrowEven.png"})`,
       top: 8,
+      animation: "moveArrow 2s linear infinite",
     },
     "&:last-child::before": {
       display: "none",
@@ -168,6 +170,15 @@ const styles = {
       color: "white",
       opacity: 0.65,
       pr: [0, null, null, null, null, 5],
+    },
+  },
+
+  "@keyframes moveArrow": {
+    "0%": {
+      transform: "translateX(-100%)",
+    },
+    "100%": {
+      transform: "translateX(100%)",
     },
   },
 };

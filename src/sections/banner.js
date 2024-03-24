@@ -7,7 +7,7 @@ import { jsx, Flex, Container, Heading, Text, Button } from 'theme-ui';
 import Image from '../components/image';
 import Play from '../components/icons/play';
 import dynamic from 'next/dynamic';
-// import ModalVideo from 'react-modal-video';
+import { motion } from 'framer-motion';
 
 const ModalVideo = dynamic(
   () => {
@@ -22,36 +22,35 @@ const Banner = () => {
     e.preventDefault();
     setVideoOpen(true);
   };
+
   return (
     <section id="home" sx={styles.section}>
       <Container sx={styles.container}>
-        <div sx={styles.content}>
-          <Heading as="h1">
-          Industry Specific Business Intelligence and Gen AI Cloud Data Platform
-          </Heading>
-          <Text as="p">A simple and powerful erp management tools</Text>
-          <Flex sx={styles.buttonGroup}>
-            <Button variant="primary" sx={styles.btnPrimary}>
-              Contact Us
-            </Button>
-            <Button
-              variant="outlined"
-              sx={styles.btnOutlined}
-              onClick={handleClick}
-            >
-              Discover video <Play fill="white" />
-            </Button>
-            <ModalVideo
-              channel="youtube"
-              isOpen={videoOpen}
-              videoId="ZNA9rmDsYVE"
-              onClose={() => setVideoOpen(false)}
-            />
-          </Flex>
-        </div>
-        <Flex as="figure" sx={styles.illustration}>
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <div sx={styles.content}>
+            <Heading as="h1">
+              Industry Specific Business Intelligence and Gen AI Cloud Data Platform
+            </Heading>
+            <Text as="p">A simple and powerful erp management tools</Text>
+            <Flex sx={styles.buttonGroup}>
+              <Button variant="primary" sx={styles.btnPrimary}>
+                Contact Us
+              </Button>
+              <Button variant="outlined" sx={styles.btnOutlined} onClick={handleClick}>
+                Discover video <Play fill="white" />
+              </Button>
+            </Flex>
+          </div>
+        </motion.div>
+        <motion.figure as="figure" sx={styles.illustration} initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <Image src={'/images/banner.png'} alt="banner" />
-        </Flex>
+        </motion.figure>
+        <ModalVideo
+          channel="youtube"
+          isOpen={videoOpen}
+          videoId="ZNA9rmDsYVE"
+          onClose={() => setVideoOpen(false)}
+        />
       </Container>
     </section>
   );

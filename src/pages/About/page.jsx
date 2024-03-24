@@ -2,19 +2,14 @@
 import React from "react";
 import { ThemeUIProvider, Flex } from "theme-ui";
 import { theme } from "../../theme/index.ts";
-
 import Footer from "../../components/footer/footer.js";
 import Header from "../../components/header/header";
-import Services from "../../components/ProductPage/Services.jsx";
-import PremiumFeature from "../../components/ProductPage/PremiumFeature.jsx";
-import CleaningRules from "../../components/ProductPage/CleaningRules.jsx";
-import IntroVideo from "../../components/ProductPage/IntroVideo.jsx";
 import Faq from "../../components/ProductPage/FAQ.jsx";
 import AboutHerobanner from "../../components/AboutPage/AboutHerobanner.jsx";
-import WhyUs from "../../components/AboutPage/WhyUs.jsx";
 import KeyFeature from "../../components/AboutPage/OurPromise.jsx";
 import AboutServices from "../../components/AboutPage/AboutService.jsx";
-
+import Support from "../../components/footer/support.js";
+import TechStack from "../../components/AboutPage/TechStack.jsx";
 const About = () => {
   return (
     <ThemeUIProvider theme={theme}>
@@ -33,11 +28,11 @@ const About = () => {
         >
           <AboutHerobanner />
           <AboutServices />
-          <KeyFeature/>
-          <CleaningRules />
-          <IntroVideo />
+          <KeyFeature />
+          <TechStack />
           <Faq />
         </main>
+        <Support />
         <Footer />
       </Flex>
     </ThemeUIProvider>

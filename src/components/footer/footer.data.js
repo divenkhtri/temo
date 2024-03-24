@@ -2,23 +2,27 @@
 
 export const footerNav = [
   {
-    path: '#!',
+    path: '#',
     label: 'Home',
   },
   {
-    path: '#!',
-    label: 'Advertise',
+    path: '/Platform/page',
+    label: 'Platform',
   },
   {
-    path: '#!',
+    path: '/About/page',
+    label: 'About Us',
+  },
+  {
+    path: '/Pricing/page',
+    label: 'Plan & Pricing',
+  },
+  {
+    path: '/Contact/page',
     label: 'Supports',
   },
   {
-    path: '#!',
-    label: 'Marketing',
-  },
-  {
-    path: '#!',
+    path: '#faq',
     label: 'FAQ',
   },
 ];

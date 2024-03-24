@@ -13,6 +13,7 @@ import IntroVideo from "../../components/ProductPage/IntroVideo.jsx";
 import Faq from "../../components/ProductPage/FAQ.jsx";
 import Glimpse from "../../components/ProductPage/Glimpse.jsx";
 import WorkFlow from "../../components/ProductPage/Workflow.jsx";
+import Support from "../../components/footer/support.js";
 
 const ProductPage = () => {
   return (
@@ -34,13 +35,14 @@ const ProductPage = () => {
           <Services />
           <Glimpse />
           <CleaningRules />
-          <WorkFlow  />
+          <WorkFlow />
           <IntroVideo />
           <Faq />
         </main>
+        <Support />
         <Footer />
       </Flex>
     </ThemeUIProvider>
   );
 };
-export default ProductPage;
+export default ProductPage; 

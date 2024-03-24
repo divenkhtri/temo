@@ -12,7 +12,7 @@ const IntroVideo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box as="section" sx={{ height: "100vh", marginTop: '5rem', marginBottom: '8rem' }} variant="section.introVideo">
+    <Box as="section" sx={{  marginTop: '5rem', marginBottom: '4rem' }} variant="section.introVideo">
       <Container>
         <SectionHeading
           sx={styles.heading}
@@ -62,7 +62,8 @@ const styles = {
     maxWidth: "auto",
     mb: [5],
     textAlign: "center",
-    h2: {
+    fontSize: 4,
+    h1: {
       letterSpacing: "heading",
     },
   },

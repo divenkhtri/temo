@@ -4,6 +4,8 @@ import { theme } from "../../theme/index.ts";
 import Footer from "../../components/footer/footer.js";
 import Header from "../../components/ProductPage/Productheader/header.js";
 import PricingTable from "../../components/PricingPage/Pricing.jsx";
+import Support from "../../components/footer/support.js";
+import StillConfused from "../../components/PricingPage/StillConfused.jsx";
 const Pricing = () => {
   return (
     <ThemeUIProvider theme={theme}>
@@ -21,7 +23,9 @@ const Pricing = () => {
           }}
         >
           <PricingTable />
+          <StillConfused/>
         </main>
+        <Support />
         <Footer />
       </Flex>
     </ThemeUIProvider>

@@ -79,7 +79,7 @@ const accordionData = [
 
 const FAQ = () => {
   return (
-    <Box as="section" sx={{ marginTop: '5rem'}}>
+    <Box as="section" id="faq" sx={{ marginTop: '5rem'}}>
       <Container>
         <BlockTitle
           title="Frequently Ask Question"

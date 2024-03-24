@@ -1,14 +1,15 @@
-/** @jsxRuntime classic */
+/** @jsxRuntime classic */ 
 /** @jsx jsx */
 import { jsx, Flex } from "theme-ui";
 import React from "react";
 import Header from "./header/header";
-import Footer from "./footer/footer";
+import Footer from "./footer/footer"
+import Support from './footer/support'
 export default function Layout({ children }) {
   return (
     <Flex
       sx={{
-        minHeight: "100vh",
+        minHeight: "100vh", 
         flexDirection: "column",
         justifyContent: "space-between",
       }}
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       >
         {children}
       </main>
+      <Support/>
       <Footer />
     </Flex>
   );
