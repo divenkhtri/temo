@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import SectionHeading from "../components/section-heading";
 import PriceTable from "../components/cards/price-table";
 import SlickArrow from "../components/slick-arrow";
+import { Fade } from "react-awesome-reveal";
+import HeadingFade from "../animations/headingFade";
 
 const data = [
   {
@@ -86,7 +88,7 @@ const data = [
       {
         id: 7,
         isAvailable: false,
-        title: `All Generative-AI Models`
+        title: `All Generative-AI Models`,
       },
     ],
   },
@@ -168,15 +170,25 @@ const Pricing = () => {
   return (
     <Box as="section" id="pricing" sx={styles.section}>
       <Container sx={styles.container}>
-        <SectionHeading
-          sx={styles.heading}
-          slogan="Deal for your business"
-          title="Meet our pricing plan that suit you"
-        />
+        <HeadingFade>
+          <SectionHeading
+            sx={styles.heading}
+            slogan="Deal for your business"
+            title="Meet our pricing plan that suit you"
+          />
+        </HeadingFade>
         <Box sx={styles.grid}>
           {data?.map((price, index) => (
             <Box key={index} sx={styles.cardContainer}>
-              <PriceTable price={price} />
+              <Fade
+                delay={index * 200}
+                duration={1000}
+                direction="up"
+                cascade={true}
+                triggerOnce={true}
+              >
+                <PriceTable price={price} />
+              </Fade>
             </Box>
           ))}
         </Box>
@@ -196,10 +208,12 @@ const styles = {
     pr: 0,
   },
   heading: {
+    mx: "auto",
+    textAlign: "center",
     mb: [7, null, null, null, 14, null, 18],
     px: [6, null, null, 0],
     h3: {
-      fontSize: [3, null, null, 8],
+      fontSize: [3, null, null, 10],
     },
   },
   grid: {

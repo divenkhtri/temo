@@ -12,14 +12,14 @@ import UltimateFeatures from "../sections/ultimate-features";
 import Pricing from "../sections/pricing";
 import Featured from "../sections/features.js";
 import FAQ from "../components/ProductPage/FAQ.jsx";
-import TechUsed from "../sections/techUsed.js";
+import TechUsed from "../sections/TechUsed.jsx";
 
 const IndexPage = () => {
   return (
     <ThemeUIProvider theme={theme}>
       <Layout>
         <SEO
-          title="CRM Software Landing"
+          title="RGS Data Platfrom"
           description="Collection of free top of the line startup landing templates built using react/ next js. Free to download, simply edit and deploy! Updated weekly!"
         />
         <Banner />

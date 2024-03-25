@@ -1,9 +1,11 @@
+"use client";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Container, Heading } from "theme-ui";
 import Slider from "react-slick";
 import Testimonial from "../components/cards/testimonial";
-
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { rgba } from "polished";
 
 const data = [
@@ -54,21 +56,49 @@ const settings = {
 };
 
 const Testimonials = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
   return (
-    <section id="testimonials" sx={styles.section}>
-      <Container>
-        <Box sx={styles.heading}>
-          <Heading as="h2" variant="heading" sx={styles.headingText}>
-            Addressing Key Data Challenges in the Restaurant Industry
-          </Heading>
-        </Box>
-        <Slider sx={styles.slider} {...settings}>
-          {data.map((testimonial) => (
-            <Testimonial key={testimonial.id} data={testimonial} />
-          ))}
-        </Slider>
-      </Container>
-    </section>
+    <div ref={ref}>
+      <motion.section
+        id="testimonials"
+        sx={styles.section}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <Container>
+          <motion.div transition={{ duration: 0.3, ease: "easeInOut" }}>
+            <Box
+              sx={styles.heading}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <Heading as="h2" variant="heading" sx={styles.headingText}>
+                Addressing Key Data Challenges in the Restaurant Industry
+              </Heading>
+            </Box>
+          </motion.div>
+          <motion.div
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }}
+          >
+            <Slider sx={styles.slider} {...settings}>
+              {data.map((testimonial) => (
+                <Testimonial key={testimonial.id} data={testimonial} />
+              ))}
+            </Slider>
+          </motion.div>
+        </Container>
+      </motion.section>
+    </div>
   );
 };
 
@@ -79,7 +109,7 @@ const styles = {
     pt: [12, null, null, null, 10, 14],
     pb: [8, null, null, null, 10, 14],
     mt: 7,
-    mb: '-2rem'
+    mb: "-2rem",
   },
   heading: {
     textAlign: "center",

@@ -3,68 +3,69 @@
 import { jsx, Box, Container } from "theme-ui";
 import SectionHeading from "../components/section-heading";
 import Feature from "../components/cards/feature";
-
+import { Fade } from "react-awesome-reveal";
 const data = [
   {
     id: 1,
     icon: "/images/icons/1.png",
     title: "Data Ingestion",
     description: `Seamless integration with diverse data sources including databases, APIs, streaming platforms, and cloud storage.`,
-
   },
   {
     id: 2,
     icon: "/images/icons/2.png",
     title: "Data Storage",
     description: `Scalable and secure data storage with support for both structured and unstructured data.`,
-
   },
   {
     id: 3,
     icon: "/images/icons/3.png",
     title: "Data Processing",
     description: `Distributed processing capabilities using GCP tools for efficient data transformation and analysis.`,
-
   },
   {
     id: 4,
     icon: "/images/icons/1.png",
     title: "Data Analytics & AI",
     description: `Advanced analytics and machine learning capabilities for gaining actionable insights and predictive analytics.`,
-
   },
   {
     id: 5,
     icon: "/images/icons/2.png",
     title: "Data Visualization",
     description: `Intuitive and interactive visualizations to explore and communicate data findings effectively.`,
-
   },
   {
     id: 6,
     icon: "/images/icons/3.png",
     title: "Data Governance",
     description: `Robust data governance and security features to ensure compliance and data privacy.`,
-
   },
 ];
 
 const UltimateFeatures = () => {
   return (
-    <section sx={styles.section} id="services">
-      <Container>
-        <SectionHeading
-          sx={styles.heading}
-          title="Go beyond ultimate Services and Operation"
-          description="Ideal solutions for your Restaurent"
-        />
-        <Box sx={styles.features}>
-          {data?.map((item) => (
+    <Container sx={styles.section}>
+      <SectionHeading
+        sx={styles.heading}
+        title="Go beyond ultimate Services and Operation"
+        slogan="Ideal solutions for your Restaurent"
+      />
+      <Box sx={styles.features}>
+        {data?.map((item) => (
+          <Fade
+            delay={item * 700}
+            duration={1500}
+            direction="up"
+            cascade={true}
+            fraction={0}
+            triggerOnce={false}
+          >
             <Feature key={item.id} className="feature-item" data={item} />
-          ))}
-        </Box>
-      </Container>
-    </section>
+          </Fade>
+        ))}
+      </Box>
+    </Container>
   );
 };
 
@@ -72,7 +73,7 @@ export default UltimateFeatures;
 
 const styles = {
   section: {
-    pb: [6, null, null, 8, 15],
+    py: [6, null, null, 8, 15],
   },
   heading: {
     marginBottom: [40, 50, 60, 80],

@@ -27,15 +27,15 @@ const Addons = () => {
         id="features"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }} // Adjust duration here
       >
         <Container>
           <Box sx={styles.grid}>
-            <motion.div transition={{ duration: 0.3, ease: "easeInOut" }}>
-              <Box
-                style={{ x: imageX, opacity: opacity }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
+            <motion.div
+              style={{ x: imageX, opacity: opacity }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <Box>
                 <SectionHeading
                   sx={styles.heading}
                   title="Integrated with the ultimate add-on management"
@@ -48,7 +48,11 @@ const Addons = () => {
               style={{ x: textX, opacity: opacity }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <Flex sx={styles.illustration}>
+              <Flex
+                sx={styles.illustration}
+
+                // Adjust duration here
+              >
                 <Image src={"/images/addons.png"} alt="addons" />
               </Flex>
             </motion.div>

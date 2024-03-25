@@ -10,6 +10,7 @@ import {
   preventClose,
   combineReducers,
 } from "./shared";
+import { Fade } from "react-awesome-reveal";
 
 export default function Accordion({ items, ...props }) {
   const openIcon = (
@@ -26,21 +27,29 @@ export default function Accordion({ items, ...props }) {
       {({ openIndexes, handleItemClick }) => (
         <>
           {items.map((item, index) => (
-            <AccordionItem
-              key={item.title}
-              isOpen={openIndexes.includes(index)}
+            <Fade
+              delay={index * 200}
+              duration={1000}
+              direction="up"
+              cascade={true}
+              triggerOnce={true}
             >
-              <AccordionButton onClick={() => handleItemClick(index)}>
-                <span>
-                  {openIndexes.includes(index) ? openIcon : closeIcon}
-                </span>
-                {item.title}
-              </AccordionButton>
+              <AccordionItem
+                key={item.title}
+                isOpen={openIndexes.includes(index)}
+              >
+                <AccordionButton onClick={() => handleItemClick(index)}>
+                  <span>
+                    {openIndexes.includes(index) ? openIcon : closeIcon}
+                  </span>
+                  {item.title}
+                </AccordionButton>
 
-              <AccordionContents isOpen={openIndexes.includes(index)}>
-                {item.contents}
-              </AccordionContents>
-            </AccordionItem>
+                <AccordionContents isOpen={openIndexes.includes(index)}>
+                  {item.contents}
+                </AccordionContents>
+              </AccordionItem>{" "}
+            </Fade>
           ))}
         </>
       )}

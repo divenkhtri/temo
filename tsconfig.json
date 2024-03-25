@@ -22,5 +22,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/image.js", "src/theme/index.ts", "src/pages/Contact/page.jsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/components/animation/fades.js"]
 }

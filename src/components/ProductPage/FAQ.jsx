@@ -3,6 +3,7 @@ import { Box, Container, Flex, Text, Heading } from "theme-ui";
 import { Link } from "../link";
 import BlockTitle from "../block-title";
 import Accordion from "../accordion/accordion";
+import HeadingFade from "../../animations/headingFade";
 
 const accordionData = [
   {
@@ -61,45 +62,41 @@ const accordionData = [
       </div>
     ),
   },
-  {
-    isExpanded: false,
-    title: "How do I get the payment complete?",
-    contents: (
-      <div>
-        For our recent trip to S.A. I booked several accommodation thru SA
-        Places. I just wanted to tell you that everything worked out perfectly
-        with all the bookings and also your booking was very quick and
-        professional. I hope I have the opportunity to re-visit South Africa
-        soon, I will then make my bookings with your company again. I will also
-        recommend
-      </div>
-    ),
-  },
+
 ];
 
 const FAQ = () => {
   return (
-    <Box as="section" id="faq" sx={{ marginTop: '5rem'}}>
+    <Box as="section" id="faq" sx={{ marginTop: "5rem" }}>
       <Container>
-        <BlockTitle
-          title="Frequently Ask Question"
-          text="Ask your question and meet"
-        />
+        <HeadingFade>
+          <BlockTitle
+            title="Frequently Ask Question"
+            text="Ask your question and meet"
+          />
+        </HeadingFade>{" "}
         <Flex sx={styles.flex}>
           <Box sx={styles.faqWrapper}>
             <Accordion items={accordionData} />
           </Box>
+
           <Box sx={styles.content}>
-            <Heading as="h3">
-              Do you have any quesiton? Please ask here we ready to support
-            </Heading>
-            <Text as="p">
-              If your question is not list here, please feel free to make a
-              manual support.
-            </Text>
-            <Link sx={styles.askButton} path="#">
-              Ask your Question
-            </Link>
+            <HeadingFade>
+              <Heading as="h3">
+                Do you have any quesiton? Please ask here we ready to support
+              </Heading>
+            </HeadingFade>
+            <HeadingFade delay={500}>
+              <Text as="p">
+                If your question is not list here, please feel free to make a
+                manual support.
+              </Text>
+            </HeadingFade>
+            <HeadingFade delay={1000}>
+              <Link sx={styles.askButton} path="#">
+                Ask your Question
+              </Link>
+            </HeadingFade>
           </Box>
         </Flex>
       </Container>
@@ -111,52 +108,52 @@ export default FAQ;
 
 const styles = {
   flex: {
-    flexWrap: 'wrap',
-    flexDirection: ['column', null, null, null, null, 'row-reverse'],
-    pb: ['60px', null, null, null, '90px', null, '10px'],
+    flexWrap: "wrap",
+    flexDirection: ["column", null, null, null, null, "row-reverse"],
+    pb: ["60px", null, null, null, "90px", null, "10px"],
   },
   content: {
-    flex: ['0 0 100%', null, null, null, '0 0 33.333%'],
-    maxWidth: ['100%', null, null, '450px', '100%'],
-    mx: ['auto', null, null, null, '0'],
-    mb: ['0px', null, null, null, '0'],
-    textAlign: ['center', null, null, null, null, 'left'],
-    mt: ['40px', null, null, null, null, '0'],
+    flex: ["0 0 100%", null, null, null, "0 0 33.333%"],
+    maxWidth: ["100%", null, null, "450px", "100%"],
+    mx: ["auto", null, null, null, "0"],
+    mb: ["0px", null, null, null, "0"],
+    textAlign: ["center", null, null, null, null, "left"],
+    mt: ["40px", null, null, null, null, "0"],
     h3: {
-      fontSize: ['23px', null, null, null, '24px'],
+      fontSize: ["23px", null, null, null, "24px"],
       lineHeight: [1.5, null, null, null, 1.67],
-      color: 'black',
+      color: "black",
       fontWeight: 700,
-      letterSpacing: '-1.5px',
-      mt: '-5px',
-      pr: ['0', null, null, null, null, '30px'],
+      letterSpacing: "-1.5px",
+      mt: "-5px",
+      pr: ["0", null, null, null, null, "30px"],
     },
     p: {
-      fontSize: '16px',
+      fontSize: "16px",
       lineHeight: 1.87,
-      color: '#343D48',
+      color: "#343D48",
       opacity: 0.7,
-      mt: '10px',
-      pr: ['0', null, null, null, null, '80px'],
+      mt: "10px",
+      pr: ["0", null, null, null, null, "80px"],
     },
   },
   askButton: {
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    backgroundColor: '#02073E',
-    color: '#fff',
-    borderRadius: '5px',
-    fontSize: '16px',
+    display: "inline-block",
+    verticalAlign: "middle",
+    backgroundColor: "#02073E",
+    color: "#fff",
+    borderRadius: "5px",
+    fontSize: "16px",
     fontWeight: 700,
-    p: '6.5px 19px',
-    letterSpacing: '-0.16px',
-    mt: '25px',
-    transition: 'all 500ms ease',
-    '&:hover': {
+    p: "6.5px 19px",
+    letterSpacing: "-0.16px",
+    mt: "25px",
+    transition: "all 500ms ease",
+    "&:hover": {
       opacity: 0.8,
     },
   },
   faqWrapper: {
-    flex: ['0 0 100%', null, null, null, '0 0 66.666%'],
+    flex: ["0 0 100%", null, null, null, "0 0 66.666%"],
   },
 };

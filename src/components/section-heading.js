@@ -49,7 +49,7 @@ const styles = {
   slogan: {
     color: 'primary',
     fontWeight: 500,
-    fontSize: 2,
+    fontSize: [3, null, 4, 5],
     lineHeight: 2.25,
   },
   title: {

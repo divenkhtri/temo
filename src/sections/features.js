@@ -4,11 +4,13 @@ import BlockTitle from "../components/block-title";
 import Image from "../components/image";
 import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
 import { FaBriefcase, FaCog } from "react-icons/fa";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { Fade } from "react-reveal";
 const Featured = () => {
   const [tab, setTab] = useState({
     active: "budget",
   });
+  const [[direction]] = useState([0]);
 
   const handleTab = (tab) => {
     if (tab === "budget") {
@@ -36,8 +38,31 @@ const Featured = () => {
       });
     }
   };
+  const variants = {
+    enter: (direction) => {
+      return {
+        x: direction > 0 ? 1000 : -1000,
+        opacity: 0,
+      };
+    },
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => {
+      return {
+        zIndex: 0,
+        x: direction < 0 ? 1000 : -1000,
+        opacity: 0,
+      };
+    },
+  };
+
   return (
     <Box as="section" sx={styles.featured}>
+    <Fade bottom>
+
       <Container sx={styles.container}>
         <BlockTitle
           title="Why RGS Data Platform"
@@ -75,37 +100,89 @@ const Featured = () => {
             </Button>
           </Box>
         </Box>
-        <Box sx={styles.tabContent}>
-          {tab.active === "budget" && (
-            <Image
-              src={"/images/tab-image-1.png"}
-              alt="tab image"
-              className="tabImage"
-            />
-          )}
-          {tab.active === "create" && (
-            <Image
-              src={"/images/tab-image-1.png"}
-              alt="tab image"
-              className="tabImage"
-            />
-          )}
-          {tab.active === "adjust" && (
-            <Image
-              src={"/images/tab-image-1.png"}
-              alt="tab image"
-              className="tabImage"
-            />
-          )}
-          {tab.active === "report" && (
-            <Image
-              src={"/images/tab-image-1.png"}
-              alt="tab image"
-              className="tabImage"
-            />
-          )}
-        </Box>
+        <AnimatePresence initial={false} custom={direction}>
+          <Box sx={styles.tabContent}>
+            {tab.active === "budget" && (
+              <motion.div
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 150, damping: 40 },
+                  opacity: { duration: 0.2 },
+                }}
+              >
+                <Image
+                  src={"/images/tab-image-1.png"}
+                  alt="tab image"
+                  className="tabImage"
+                />
+              </motion.div>
+            )}
+            {tab.active === "create" && (
+              <motion.div
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 150, damping: 40 },
+                  opacity: { duration: 0.2 },
+                }}
+              >
+                <Image
+                  src={"/images/tab-image-1.png"}
+                  alt="tab image"
+                  className="tabImage"
+                />
+              </motion.div>
+            )}
+            {tab.active === "adjust" && (
+              <motion.div
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 150, damping: 40 },
+                  opacity: { duration: 0.2 },
+                }}
+              >
+                <Image
+                  src={"/images/tab-image-1.png"}
+                  alt="tab image"
+                  className="tabImage"
+                />
+              </motion.div>
+            )}
+            {tab.active === "report" && (
+              <motion.div
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 150, damping: 40 },
+                  opacity: { duration: 0.2 },
+                }}
+              >
+                <Image
+                  src={"/images/app.png"}
+                  alt="tab image"
+                  className="tabImage"
+                />
+              </motion.div>
+            )}
+          </Box>
+        </AnimatePresence>
       </Container>
+    </Fade>
+
     </Box>
   );
 };
@@ -114,7 +191,7 @@ export default Featured;
 
 const styles = {
   featured: {
-    pt: ["80px", null, null, null, "80px", null, "100px"],
+    pt: ["80px", null, null, null, "80px", null, "40px"],
     backgroundColor: "#F9FAFC",
   },
   container: {
