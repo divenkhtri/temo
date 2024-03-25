@@ -21,16 +21,15 @@ export default function Support() {
           </Box>
         </HeadingFade>
 
-<Fade bottom duration={1000} ssrFadeout>
-
-        <Box as="figure" sx={styles.thumbWrapper}>
-          <Image
-            src={"/images/footer/support-team.png"}
-            loading="lazy"
-            alt="Support Team"
-          />
-        </Box>
-</Fade>
+        <Fade bottom duration={1000} ssrFadeout>
+          <Box as="figure" sx={styles.thumbWrapper}>
+            <Image
+              src={"/images/footer/support-team.png"}
+              loading="lazy"
+              alt="Support Team"
+            />
+          </Box>
+        </Fade>
       </Container>
     </section>
   );

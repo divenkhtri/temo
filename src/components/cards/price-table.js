@@ -22,11 +22,10 @@ const PriceTable = ({ price }) => {
         <Text as="p" sx={styles.subtitle}>
           {price.subtitle}
         </Text>
-        <Link href='/Contact/page'>
-          
-        <Button sx={styles.button} variant="text">
-          {price.buttonText}
-        </Button>
+        <Link href="/Contact/page">
+          <Button sx={styles.button} variant="text">
+            {price.buttonText}
+          </Button>
         </Link>
       </Box>
       <Box as="ul" sx={styles.list}>

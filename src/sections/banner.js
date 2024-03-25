@@ -8,6 +8,7 @@ import Image from '../components/image';
 import Play from '../components/icons/play';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const ModalVideo = dynamic(
   () => {
@@ -33,9 +34,12 @@ const Banner = () => {
             </Heading>
             <Text as="p">A simple and powerful erp management tools</Text>
             <Flex sx={styles.buttonGroup}>
+            <Link href='/Contact/page'>
+
               <Button variant="primary" sx={styles.btnPrimary}>
                 Contact Us
               </Button>
+            </Link>
               <Button variant="outlined" sx={styles.btnOutlined} onClick={handleClick}>
                 Discover video <Play fill="white" />
               </Button>

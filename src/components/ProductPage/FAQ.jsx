@@ -93,7 +93,7 @@ const FAQ = () => {
               </Text>
             </HeadingFade>
             <HeadingFade delay={1000}>
-              <Link sx={styles.askButton} path="#">
+              <Link sx={styles.askButton} path="/Contact/page">
                 Ask your Question
               </Link>
             </HeadingFade>

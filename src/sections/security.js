@@ -50,7 +50,6 @@ const Security = () => {
                 <SectionHeading
                   title="Unbeatable privacy &amp; secure data storage"
                   description="Our data centers have top-notch security and surveillance, with a reliable 99.9% uptime. Secure email hosting with encryption both at rest and end-to-end, along with S/MIME message encryption."
-                  learnMore="Secure data storage"
                 />
               </Box>
             </motion.div>

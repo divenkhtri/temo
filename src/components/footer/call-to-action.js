@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { jsx } from "theme-ui";
 import { Container, Box, Heading, Button } from "theme-ui";
@@ -16,20 +17,22 @@ const CallToAction = () => {
           <Heading sx={styles.heading}>
             Do you have any question? Feel free to contact us
           </Heading>
-          <Box sx={styles.btnWrapper}>
-            <Button
-              variant="text"
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHover}
-              sx={{
-                ...styles.btnWrapper.button,
-                transition: "transform 0.3s ease-in-out",
-                transform: isHovering ? "scale(1.1)" : "scale(1)",
-              }}
-            >
-              Contact us now
-            </Button>
-          </Box>
+          <Link href="/Contact/page" sx={{ textDecoration: "none" }}>
+            <Box sx={styles.btnWrapper}>
+              <Button
+                variant="text"
+                onMouseEnter={handleHover}
+                onMouseLeave={handleHover}
+                sx={{
+                  ...styles.btnWrapper.button,
+                  transition: "transform 0.3s ease-in-out",
+                  transform: isHovering ? "scale(1.1)" : "scale(1)",
+                }}
+              >
+                Contact us now
+              </Button>
+            </Box>
+          </Link>
         </Box>
       </Container>
     </section>

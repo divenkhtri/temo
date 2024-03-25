@@ -40,7 +40,6 @@ const Addons = () => {
                   sx={styles.heading}
                   title="Integrated with the ultimate add-on management"
                   description="Our data centers have top-notch security and surveillance, with a reliable 99.9% uptime. Secure email hosting with encryption both at rest and end-to-end, along with S/MIME message encryption."
-                  learnMore="Explore More"
                 />
               </Box>
             </motion.div>
@@ -48,11 +47,7 @@ const Addons = () => {
               style={{ x: textX, opacity: opacity }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <Flex
-                sx={styles.illustration}
-
-                // Adjust duration here
-              >
+              <Flex sx={styles.illustration}>
                 <Image src={"/images/addons.png"} alt="addons" />
               </Flex>
             </motion.div>
