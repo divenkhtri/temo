@@ -18,18 +18,17 @@ import HeadingFade from "@/animations/headingFade";
 const ContactForm = () => {
   return (
     <Flex
-      sx={{
-        backgroundColor: "#5567FF",
-        justifyContent: "center",
+    sx={{
+        flexDirection: "column",
         alignItems: "center",
-        pt: 5,
-        pb: "10rem",
+        backgroundColor: "#5567FF",
+        py: [4, 5, 6], // Responsive vertical padding
       }}
     >
-      <Box sx={{}}>
-        <Flex sx={{ flexDirection: ["column", "row"], mt: "10rem" }}>
+     <Box sx={{ width: "100%", maxWidth: "1200px" }}>
+        <Flex sx={{ flexDirection: ["column", "row"], mt: [4, "10rem"] }}>
           <Box sx={{ flex: 1, pr: [0, 10], mb: [4, 0] }}>
-            <HeadingFade>
+          <HeadingFade>
               <Heading
                 as="h1"
                 sx={{ fontSize: "4rem" }}

@@ -9,7 +9,7 @@ const data = [
     id: 1,
     icon: "/images/pricing/support.png",
     title: "Still unsure?",
-    description: `Let us help you with finding the best plan for your business and get your started`,
+    description: `Let us help you with finding the best plan for your business and get you started`,
   },
   {
     id: 2,

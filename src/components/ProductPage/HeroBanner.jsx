@@ -52,7 +52,7 @@ const HeroBanner = () => {
         />
         <HeadingFade>
           <Heading as="h2">
-            All in one Data platform for all your day to day operations
+            All in one Data platform for all your Day to Day Operations
           </Heading>
         </HeadingFade>
         <HeadingFade delay={500}>
