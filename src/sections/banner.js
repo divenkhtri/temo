@@ -67,9 +67,9 @@ const Banner = () => {
           />
         </motion.figure>
         <ModalVideo
-          channel="youtube"
+          channel="custom"
           isOpen={videoOpen}
-          videoId="ZNA9rmDsYVE"
+          url="https://storage.googleapis.com/rgs-tech-website-video-files/updated.mp4"
           onClose={() => setVideoOpen(false)}
         />
       </Container>
