@@ -15,7 +15,7 @@ export default function Support() {
           <Box>
             <SectionHeading
               sx={styles.heading}
-              title="Meet our support team who always work hardly behind the scenes"
+              title="Our Dedicated Support Team: Working Hard Behind the Scenes for You"
               description="Focus only on the meaning, we take care of the data. As soon as the meeting end you can export in one click into your preferred."
             />
           </Box>

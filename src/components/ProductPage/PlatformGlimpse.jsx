@@ -273,7 +273,7 @@ const styles = {
   featured: {
     my: 6,
     pt: ["80px", null, null, null, "80px", null, "40px"],
-    mb: "20rem",
+    mb: "30rem",
     backgroundColor: "#F9FAFC",
     height: "100vh",
   },
@@ -284,16 +284,17 @@ const styles = {
   },
   tabButtonTopWrapper: {
     overflowY: ["hidden", null, null, null, null, "inherit"],
-    overflowX: ["auto", null, null, null, null, "inherit"],
+    overflowX: ["auto", "inherit"],
   },
   tabButtonWrapper: {
-    width: ["700px", null, null, null, null, "100%"],
+    width: ["100%", null, null, null, null, "100%"], // Full width on small and medium screens
     mx: ["auto", null, null, null, null, "0"],
     display: "flex",
+    flexDirection: ["column", null, null, null, null, "row"], // Stack buttons vertically on small screens, horizontally on larger screens
+    alignItems: ["center", null, null, null, null, "center"], // Center buttons horizontally on all screens
     justifyContent: "center",
-    alignItems: "center",
     borderBottom: "1px solid rgba(1,7,13,.1)",
-    mb: "35px",
+    mb: ["35px", null, null, null, null, "35px"],
     button: {
       display: "flex",
       alignItems: "center",
@@ -339,6 +340,7 @@ const styles = {
       },
     },
   },
+
   tabContent: {
     minHeight: ["190px", null, "300px", "385px", null, "600px"],
     marginBottom: 10,
