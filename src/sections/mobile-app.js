@@ -46,7 +46,7 @@ const MobileApp = () => {
               <Box sx={styles.heading}>
                 <SectionHeading
                   title="Beyond on limitation with our android and iOS mobile application"
-                  description="Manage your business communications even when you're away from your desk. Native mobile apps for Mail, Mail Admin, and Streams make staying in touch on the go easier and effortless. e-Discovery helps discover such retained emails quickly."
+                  description="Manage your business communications even when you're away from your desk. Native mobile apps for all data insights, order management and inventory management make staying in touch on the go easier and effortless."
                 />
               </Box>
             </motion.div>

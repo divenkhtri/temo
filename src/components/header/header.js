@@ -95,7 +95,6 @@ const styles = {
       },
       ":hover": {
         fontSize: 6,
-        color: "#5567FF",
       },
     },
     ".is-sticky": {

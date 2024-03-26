@@ -8,14 +8,14 @@ const data = [
   {
     id: 1,
     icon: "/images/pricing/support.png",
-    title: "Do you need help support",
-    description: `Get your website ads tests delivered at let collect sample from the victory of the update managements services.`,
+    title: "Still unsure?",
+    description: `Let us help you with finding the best plan for your business and get your started`,
   },
   {
     id: 2,
     icon: "/images/pricing/support.png",
-    title: "Do you need help support",
-    description: `Get your website ads tests delivered at let collect sample from the victory of the update managements services.`,
+    title: "Need a demo?",
+    description: `Get a personalized 1:1 demo for your unique business use case and elevate your operation and management`,
   },
 ];
 
@@ -25,7 +25,8 @@ const StillConfused = () => {
       <Container>
         <Link href="/Contact/page" sx={{ textDecoration: "none" }}>
           <Grid sx={styles.grid}>
-            {data?.map((item) => (  
+            {data?.map((item) => (
+
               <Flex key={item.id} sx={styles.supportItem}>
                 <Flex as="figure" sx={styles.media}>
                   <Image src={item?.icon} alt={item?.title} />
@@ -92,10 +93,9 @@ const styles = {
     },
   },
   content: {
-    mt: ["-7px"],
     h2: {
       fontWeight: 700,
-      fontSize: [2, null, null, null, 4],
+      fontSize: [2, null, null, null, 6],
       lineHeight: 1.5,
       color: "textSecondary",
       display: "flex",
@@ -103,7 +103,7 @@ const styles = {
       justifyContent: "space-between",
     },
     p: {
-      fontSize: [1, null, null, null, 1],
+      fontSize: [1, null, null, null, 3],
       lineHeight: [2.13],
       color: "headingSecondary",
       mt: [3],

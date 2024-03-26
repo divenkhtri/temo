@@ -12,7 +12,6 @@ const Service = ({ service }) => {
       </Box>
       <Heading as="h4">{service.title}</Heading>
       <Text as="p">{service.desc}</Text>
-      <LearnMore path={service.link} />
     </Box>
   );
 };

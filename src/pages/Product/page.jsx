@@ -14,6 +14,7 @@ import Faq from "../../components/ProductPage/FAQ.jsx";
 import Glimpse from "../../components/ProductPage/Glimpse.jsx";
 import WorkFlow from "../../components/ProductPage/Workflow.jsx";
 import Support from "../../components/footer/support.js";
+import PlatformGlimpse from "../../components/ProductPage/PlatformGlimpse.jsx";
 
 const ProductPage = () => {
   return (
@@ -36,6 +37,7 @@ const ProductPage = () => {
           <Glimpse />
           <CleaningRules />
           <WorkFlow />
+          <PlatformGlimpse/>
           <IntroVideo />
           <Faq />
         </main>

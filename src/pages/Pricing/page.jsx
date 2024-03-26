@@ -6,6 +6,7 @@ import Header from "../../components/ProductPage/Productheader/header.js";
 import PricingTable from "../../components/PricingPage/Pricing.jsx";
 import Support from "../../components/footer/support.js";
 import StillConfused from "../../components/PricingPage/StillConfused.jsx";
+import HeadingFade from "../../animations/headingFade.js";
 const Pricing = () => {
   return (
     <ThemeUIProvider theme={theme}>
@@ -23,7 +24,9 @@ const Pricing = () => {
           }}
         >
           <PricingTable />
-          <StillConfused/>
+          <HeadingFade delay={500}>
+            <StillConfused />
+          </HeadingFade>
         </main>
         <Support />
         <Footer />

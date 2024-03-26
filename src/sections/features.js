@@ -6,6 +6,7 @@ import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
 import { FaBriefcase, FaCog } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Fade } from "react-reveal";
+import SectionHeader from "../components/section-header";
 const Featured = () => {
   const [tab, setTab] = useState({
     active: "budget",
@@ -61,128 +62,158 @@ const Featured = () => {
 
   return (
     <Box as="section" sx={styles.featured}>
-    <Fade bottom>
-
-      <Container sx={styles.container}>
-        <BlockTitle
-          title="Why RGS Data Platform"
-          text="Introducing all in one operational application for your Restaurent Operation"
-        />
-        <Box sx={styles.tabButtonTopWrapper}>
-          <Box sx={styles.tabButtonWrapper}>
-            <Button
-              onClick={() => handleTab("budget")}
-              className={`${tab.active === "budget" ? "active" : ""}`}
-            >
-              <AiFillDollarCircle />
-              Budget Overview
-            </Button>
-            <Button
-              onClick={() => handleTab("adjust")}
-              className={`${tab.active === "adjust" ? "active" : ""}`}
-            >
-              <FaCog />
-              Create & adjust
-            </Button>
-            <Button
-              onClick={() => handleTab("report")}
-              className={`${tab.active === "report" ? "active" : ""}`}
-            >
-              <AiFillPieChart />
-              View Reports
-            </Button>
-            <Button
-              onClick={() => handleTab("create")}
-              className={`${tab.active === "create" ? "active" : ""}`}
-            >
-              <FaBriefcase />
-              Create & adjust
-            </Button>
+      <Fade bottom>
+        <Container sx={styles.container}>
+          <BlockTitle
+            title="Why RGS Data Platform"
+            text="Introducing all in one operational application for your Restaurent Operation"
+          />
+          <Box sx={styles.tabButtonTopWrapper}>
+            <Box sx={styles.tabButtonWrapper}>
+              <Button
+                onClick={() => handleTab("budget")}
+                className={`${tab.active === "budget" ? "active" : ""}`}
+              >
+                <AiFillDollarCircle />
+                Sales Overview
+              </Button>
+              <Button
+                onClick={() => handleTab("adjust")}
+                className={`${tab.active === "adjust" ? "active" : ""}`}
+              >
+                <FaCog />
+                Manage Order
+              </Button>
+              <Button
+                onClick={() => handleTab("report")}
+                className={`${tab.active === "report" ? "active" : ""}`}
+              >
+                <AiFillPieChart />
+                View Reports
+              </Button>
+              <Button
+                onClick={() => handleTab("create")}
+                className={`${tab.active === "create" ? "active" : ""}`}
+              >
+                <FaBriefcase />
+                Review Data Quality
+              </Button>
+            </Box>
           </Box>
-        </Box>
-        <AnimatePresence initial={false} custom={direction}>
-          <Box sx={styles.tabContent}>
-            {tab.active === "budget" && (
-              <motion.div
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 150, damping: 40 },
-                  opacity: { duration: 0.2 },
-                }}
-              >
-                <Image
-                  src={"/images/tab-image-1.png"}
-                  alt="tab image"
-                  className="tabImage"
-                />
-              </motion.div>
-            )}
-            {tab.active === "create" && (
-              <motion.div
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 150, damping: 40 },
-                  opacity: { duration: 0.2 },
-                }}
-              >
-                <Image
-                  src={"/images/tab-image-1.png"}
-                  alt="tab image"
-                  className="tabImage"
-                />
-              </motion.div>
-            )}
-            {tab.active === "adjust" && (
-              <motion.div
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 150, damping: 40 },
-                  opacity: { duration: 0.2 },
-                }}
-              >
-                <Image
-                  src={"/images/tab-image-1.png"}
-                  alt="tab image"
-                  className="tabImage"
-                />
-              </motion.div>
-            )}
-            {tab.active === "report" && (
-              <motion.div
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 150, damping: 40 },
-                  opacity: { duration: 0.2 },
-                }}
-              >
-                <Image
-                  src={"/images/app.png"}
-                  alt="tab image"
-                  className="tabImage"
-                />
-              </motion.div>
-            )}
-          </Box>
-        </AnimatePresence>
-      </Container>
-    </Fade>
-
+          <AnimatePresence initial={false} custom={direction}>
+            <Box sx={styles.tabContent}>
+              {tab.active === "budget" && (
+                <motion.div
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 150, damping: 40 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <SectionHeader
+                    title="Sales & Financial Business KPI's"
+                    slogan="A comprehensive of 32+ key business KPI's for Sales and Financial Operations "
+                  />
+                  <Image
+                    src={"/videos/sales.gif"}
+                    alt="tab image"
+                    className="tabImage"
+                    sx={{
+                      boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.3)",
+                      borderRadius: "10px  ",
+                    }}
+                  />
+                </motion.div>
+              )}
+              {tab.active === "create" && (
+                <motion.div
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 150, damping: 40 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <SectionHeader
+                    title="Check your data's health and quality"
+                    slogan="Entire visualized monitorizing system to view your data quality & generate data report as per you need"
+                  />
+                  <Image
+                    src={"/videos/data.gif"}
+                    alt="tab image"
+                    className="tabImage"
+                    sx={{
+                      boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.3)",
+                      borderRadius: "10px  ",
+                    }}
+                  />
+                </motion.div>
+              )}
+              {tab.active === "adjust" && (
+                <motion.div
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 150, damping: 40 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <SectionHeader
+                    title="Manage Your Order Easily"
+                    slogan="Easily Manage and Track you customer's orders and return items "
+                  />
+                  <Image
+                    src={"/videos/order.gif"}
+                    alt="tab image"
+                    className="tabImage"
+                    sx={{
+                      boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.3)",
+                      borderRadius: "10px  ",
+                    }}
+                  />
+                </motion.div>
+              )}
+              {tab.active === "report" && (
+                <motion.div
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 150, damping: 40 },
+                    opacity: { duration: 0.2 },
+                  }}
+                >
+                  <SectionHeader
+                    title="Easily view your business operation in visualized form and generate realtime reports"
+                    slogan="A comprehensive of 220+ key business KPI's with 50+ Industrial dashboards "
+                  />
+                  <Image
+                    src={"/videos/report.gif  "}
+                    alt="tab image"
+                    className="tabImage"
+                    sx={{
+                      boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.3)",
+                      borderRadius: "10px  ",
+                    }}
+                  />
+                </motion.div>
+              )}
+            </Box>
+          </AnimatePresence>
+        </Container>
+      </Fade>
     </Box>
   );
 };

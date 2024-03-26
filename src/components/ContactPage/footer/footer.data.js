@@ -2,11 +2,11 @@
 
 export const footerNav = [
   {
-    path: '#',
+    path: '/',
     label: 'Home',
   },
   {
-    path: '/Platform/page',
+    path: '/Product/page',
     label: 'Platform',
   },
   {
@@ -22,7 +22,7 @@ export const footerNav = [
     label: 'Supports',
   },
   {
-    path: '#faq',
+    path: '/#faq',
     label: 'FAQ',
   },
 ];

@@ -3,6 +3,7 @@ import { Container, Flex, Heading, Text } from "theme-ui";
 import { motion } from "framer-motion";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import Link from "next/link";
+import HeadingFade from "../../animations/headingFade";
 
 const PricingTable = () => {
   const fadeInVariant = {
@@ -26,121 +27,125 @@ const PricingTable = () => {
           initial="initial"
           animate="animate"
         >
-          <Heading
-            as="h1"
-            variant="styles.h1"
-            sx={{ textAlign: "center", mb: 3 }}
-          >
-            Plan & Pricing
-          </Heading>
-          <Text as="p" sx={{ textAlign: "center", mb: 10 }}>
-            Choose the plan that fits your needs
-          </Text>
+          <HeadingFade>
+            <Heading
+              as="h1"
+              variant="styles.h1"
+              sx={{ textAlign: "center", mb: 3 }}
+            >
+              Plan & Pricing
+            </Heading>
+            <Text as="p" sx={{ textAlign: "center", mb: 10 }}>
+              Choose the plan that fits your needs
+            </Text>
+          </HeadingFade>
         </motion.div>
-        <div sx={styles.tableContainer}>
-          <motion.div
-            variants={fadeInVariant}
-            initial="initial"
-            animate="animate"
-            sx={styles.table}
-          >
-            <div sx={styles.tableHeader}>
-              <div></div>
-              <div>Basic</div>
-              <div>Advanced</div>
-              <div>Business</div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Capacity</div>
-              <div>Process upto 1 GB</div>
-              <div>Process upto 10 GB</div>
-              <div>Process upto 100 GB</div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Connectors</div>
-              <div>Basic Connectors Available</div>
-              <div>All 10 Connectors</div>
-              <div>
-                All 10 Connectos + <br /> Custom Connectors
+        <HeadingFade delay={500}>
+          <div sx={styles.tableContainer}>
+            <motion.div
+              variants={fadeInVariant}
+              initial="initial"
+              animate="animate"
+              sx={styles.table}
+            >
+              <div sx={styles.tableHeader}>
+                <div></div>
+                <div>Basic</div>
+                <div>Advanced</div>
+                <div>Business</div>
               </div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Users</div>
-              <div>Upto 5</div>
-              <div>Upto 10</div>
-              <div>Unlimited Users</div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Dashboards</div>
-              <div>Pick upto any 10 Dashboards</div>
-              <div>All 50+ Dashboards</div>
-              <div>
-                All 50+ Dashboards + <br />
-                Role based access control
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Capacity</div>
+                <div>Process upto 1 GB</div>
+                <div>Process upto 10 GB</div>
+                <div>Process upto 100 GB</div>
               </div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Support</div>
-              <div>Email</div>
-              <div>
-                SSH/SSL + <br /> Email & Live Chat Support
-              </div>
-              <div>
-                SSH/SSl + <br /> Email & Live Chat Support 24 * 5
-              </div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>
-                Generative-AI Models
-              </div>
-              <div>-</div>
-              <div>Requested Addons Models</div>
-              <div>
-                1. Menu Recommendation Model
-                <br />
-                2. Propensity Model
-                <br />
-                3. Promotion's Recommendation Engine
-              </div>
-            </div>
-            <div sx={styles.tableRow}>
-              <div sx={{ fontWeight: 700, fontSize: 2 }}>Pricing</div>
-              <Link href="/Contact/page" sx={{textDecoration: 'none'}}>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Connectors</div>
+                <div>Basic Connectors Available</div>
+                <div>All 10 Connectors</div>
                 <div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    sx={styles.button}
-                  >
-                    Start Free Trial <HiOutlineArrowRight />
-                  </motion.button>
+                  All 10 Connectos + <br /> Custom Connectors
                 </div>
-              </Link>
-              <Link href="/Contact/page" sx={{textDecoration: 'none'}}>
+              </div>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Users</div>
+                <div>Upto 5</div>
+                <div>Upto 10</div>
+                <div>Unlimited Users</div>
+              </div>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Dashboards</div>
+                <div>Pick upto any 10 Dashboards</div>
+                <div>All 50+ Dashboards</div>
                 <div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    sx={styles.button}
-                  >
-                    Contact Sales <HiOutlineArrowRight />
-                  </motion.button>
+                  All 50+ Dashboards + <br />
+                  Role based access control
                 </div>
-              </Link>
-              <Link href="/Contact/page" sx={{textDecoration: 'none'}}>
+              </div>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Support</div>
+                <div>Email</div>
                 <div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    sx={styles.button}
-                  >
-                    Contact Sales <HiOutlineArrowRight />
-                  </motion.button>
+                  SSH/SSL + <br /> Email & Live Chat Support
                 </div>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
+                <div>
+                  SSH/SSl + <br /> Email & Live Chat Support 24 * 5
+                </div>
+              </div>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>
+                  Generative-AI Models
+                </div>
+                <div>-</div>
+                <div>Requested Addons Models</div>
+                <div>
+                  1. Menu Recommendation Model
+                  <br />
+                  2. Propensity Model
+                  <br />
+                  3. Promotion's Recommendation Engine
+                </div>
+              </div>
+              <div sx={styles.tableRow}>
+                <div sx={{ fontWeight: 700, fontSize: 2 }}>Pricing</div>
+                <Link href="/Contact/page" sx={{ textDecoration: "none" }}>
+                  <div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      sx={styles.button}
+                    >
+                      Start Free Trial <HiOutlineArrowRight />
+                    </motion.button>
+                  </div>
+                </Link>
+                <Link href="/Contact/page" sx={{ textDecoration: "none" }}>
+                  <div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      sx={styles.button}
+                    >
+                      Contact Sales <HiOutlineArrowRight />
+                    </motion.button>
+                  </div>
+                </Link>
+                <Link href="/Contact/page" sx={{ textDecoration: "none" }}>
+                  <div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      sx={styles.button}
+                    >
+                      Contact Sales <HiOutlineArrowRight />
+                    </motion.button>
+                  </div>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </HeadingFade>
       </Flex>
     </Container>
   );

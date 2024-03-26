@@ -100,8 +100,8 @@ const TechUsed = () => {
             <Box>
               <SectionHeading
                 sx={styles.heading}
-                slogan="Deal for your business"
-                title="Meet our pricing plan that suit you"
+                slogan="A data platform with latest technology to deal with today's data "
+                title="Our robust technology stack"
               />
             </Box>
           </HeadingFade>

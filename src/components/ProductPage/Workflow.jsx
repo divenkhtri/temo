@@ -4,27 +4,30 @@ import { jsx } from "theme-ui";
 import React from "react";
 import { Container, Grid, Box, Heading, Text } from "theme-ui";
 import ProductSectionHeader from "./components/product-section-header";
+import { Fade } from "react-awesome-reveal";
+import HeadingFade from "../../animations/headingFade";
+import Image from "../image";
 
 const data = [
   {
     id: 1,
     title: "Data Ingestion",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    text: "Seamless integration with diverse data sources including databases, APIs, streaming platforms, and cloud storage.",
   },
   {
     id: 2,
     title: "Data Transformation",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    text: "Distributed processing capabilities using GCP tools for efficient data transformation and analysis.",
   },
   {
     id: 3,
     title: "Data Consumption",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    text: "Advanced analytics and machine learning capabilities for gaining actionable insights and predictive analytics.",
   },
   {
     id: 4,
     title: "Data Analytics & Visualization",
-    text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
+    text: "Intuitive and interactive visualizations to explore and communicate data findings effectively.",
   },
 ];
 
@@ -32,22 +35,26 @@ export default function WorkFlow() {
   return (
     <section sx={styles.workflow}>
       <Container>
-        <ProductSectionHeader
-          title="Easily generate your data insights in one Click"
-          isWhite={true}
-        />
+        <HeadingFade>
+          <ProductSectionHeader
+            title="Easily generate your data insights in one click"
+            isWhite={true}
+          />
+        </HeadingFade>
 
-        <Grid sx={styles.grid}>
-          {data.map((item) => (
-            <Box sx={styles.card} key={item.id}>
-              <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
-              <Box sx={styles.wrapper}>
-                <Heading sx={styles.wrapper.title}>{item.title}</Heading>
-                <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+        <HeadingFade delay={400}>
+          <Grid sx={styles.grid}>
+            {data.map((item) => (
+              <Box sx={styles.card} key={item.id}>
+                <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
+                <Box sx={styles.wrapper}>
+                  <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+                  <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+                </Box>
               </Box>
-            </Box>
-          ))}
-        </Grid>
+            ))}
+          </Grid>
+        </HeadingFade>
       </Container>
     </section>
   );
@@ -164,7 +171,7 @@ const styles = {
     },
 
     subTitle: {
-      fontSize: 1,
+      fontSize: 2,
       fontWeight: 400,
       lineHeight: [1.85, null, null, 1.9, 2],
       color: "white",

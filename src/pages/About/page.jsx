@@ -10,6 +10,8 @@ import KeyFeature from "../../components/AboutPage/OurPromise.jsx";
 import AboutServices from "../../components/AboutPage/AboutService.jsx";
 import Support from "../../components/footer/support.js";
 import TechStack from "../../components/AboutPage/TechStack.jsx";
+import BusinessProfit from "../../components/AboutPage/Business.jsx";
+import Knowledge from "../../components/AboutPage/Knowlegde.jsx";
 const About = () => {
   return (
     <ThemeUIProvider theme={theme}>
@@ -28,6 +30,8 @@ const About = () => {
         >
           <AboutHerobanner />
           <AboutServices />
+          <BusinessProfit />
+          <Knowledge />
           <KeyFeature />
           <TechStack />
           <Faq />

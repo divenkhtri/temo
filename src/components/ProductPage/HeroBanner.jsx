@@ -2,6 +2,7 @@
 import React from "react";
 import { Box, Container, Image, Heading } from "theme-ui";
 import { keyframes } from "@emotion/react";
+import HeadingFade from "../../animations/headingFade";
 
 const HeroBanner = () => {
   return (
@@ -49,12 +50,18 @@ const HeroBanner = () => {
           alt="banner icon"
           src={"/images/banner/dot-pattern.svg"}
         />
-        <Heading as="h2">All in one Data platform for all your Restaurent Management</Heading>
-        <Image
-          src={"/videos/Animation.gif"}
-          sx={styles.bannerImage}
-          alt="banner moc"
-        />
+        <HeadingFade>
+          <Heading as="h2">
+            All in one Data platform for all your day to day operations
+          </Heading>
+        </HeadingFade>
+        <HeadingFade delay={500}>
+          <Image
+            src={"/videos/Animation.gif"}
+            sx={styles.bannerImage}
+            alt="banner moc"
+          />
+        </HeadingFade>
       </Container>
     </Box>
   );
@@ -142,7 +149,7 @@ const styles = {
   logo: {
     display: "block",
     borderRadius: "70%",
-    p: '1rem',
+    p: "1rem",
     mx: "auto",
     boxShadow: "0px 15px 35px rgba(65, 104, 139, 0.12)",
   },
@@ -150,6 +157,8 @@ const styles = {
     display: "block",
     mx: "auto",
     position: "relative",
+    boxShadow: "0 40px 40px 0 rgba(0, 0, 0, 0.2)",
+    borderRadius: "15px 50px 0 0",
     maxWidth: ["100%", null, null, "80%", null, "100%"],
   },
   container: {

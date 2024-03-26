@@ -1,23 +1,28 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Flex, Container } from 'theme-ui';
-import SectionHeading from '../section-heading';
-import Image from '../image';
-
+import { jsx, Flex, Container, Box } from "theme-ui";
+import SectionHeading from "../section-heading";
+import Image from "../image";
+import HeadingFade from "../../animations/headingFade";
 
 const TechStack = () => {
   return (
     <section id="clients" sx={styles.section}>
       <Container>
-        <SectionHeading
-          sx={styles.heading}
-          title="Company who also worked us"
-          description="Every email, web page, and social media post makes an impression on your customers. With our software you can be confident it's impression."
-          learnMore="Explore Details"
-        />
-        <Flex as="figure" sx={styles.illustration}>
-          <Image src={'/images/techused/clients.svg'} alt="clients" />
-        </Flex>
+        <HeadingFade>
+          <SectionHeading
+            sx={styles.heading}
+            title="A Robust Technology Stack "
+            description="Our platform uses latest tools and platform to provide high value output to our customers."
+          />
+        </HeadingFade>
+        <HeadingFade delay={500}>
+          <Box sx={{ background: "#000" }}>
+            <Flex as="figure" sx={styles.illustration}>
+              <Image src={"/images/techused/clients.svg"} alt="clients" />
+            </Flex>
+          </Box>
+        </HeadingFade>
       </Container>
     </section>
   );
@@ -38,8 +43,8 @@ const styles = {
     },
   },
   illustration: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: [3, null, null, 0],
   },
 };

@@ -22,7 +22,7 @@ export default function ProductSectionHeader({ title, slogan, isWhite }) {
         sx={{
           fontWeight: [500, null, null, 700],
           mb: '4rem',
-          fontSize: [6, null, 7, 8],
+          fontSize: [6, null, 7, 10],
           lineHeight: [1.33, 1.33, 2.08],
           letterSpacing: [null, null, null, "heading"],
           color: isWhite ? "white" : "heading",

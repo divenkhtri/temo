@@ -71,7 +71,7 @@ const styles = {
     fontSize: ['14px', null, '16px'],
     lineHeight: [1.86, null, 2.2],
     mt: [5],
-    maxWidth: 610,
+    maxWidth: 700,
     m: ['10px auto 0'],
   },
   learnMore: {

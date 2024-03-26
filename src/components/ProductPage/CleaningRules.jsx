@@ -6,6 +6,8 @@ import Image from "../image";
 import { LearnMore } from "../link";
 
 import { Fragment } from "react";
+import { Fade } from "react-awesome-reveal";
+import RightFade from "../../animations/rightFade";
 
 const data = [
   {
@@ -41,44 +43,71 @@ const CleaningRules = () => {
         <Box sx={styles.contentWrapper}>
           <Box sx={styles.leftContent}>
             {data?.map((item) => (
-              <Feature key={item?.id} feature={item} />
+              <Fade
+                delay={item * 900}
+                duration={1500}
+                direction="left"
+                cascade={true}
+                fraction={0}
+                triggerOnce={false}
+              >
+                <Feature key={item?.id} feature={item} />
+              </Fade>
             ))}
           </Box>
           <Box sx={styles.rightContent}>
             <SectionHeading
               sx={styles.heading}
               title={
-                <Fragment>
-                  One Stop Solution <br />
-                  for your business &amp; operations
-                </Fragment>
+                <RightFade>
+                  <Fragment>
+                    One Stop Solution <br />
+                    for your business &amp; operations
+                  </Fragment>
+                </RightFade>
               }
-              description="Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever."
+              description={
+                <RightFade delay={300}>
+                  <Fragment>
+                    Our platform provides a scalable, flexible, and real-time
+                    data processing solution, empowering organizations to
+                    harness the value of their data.
+                  </Fragment>
+                </RightFade>
+              }
             />
-            <Text sx={styles.listItem} as="p">
-              <Image
-                src={"/images/icons/check-circle-filled.png"}
-                alt="check icon"
-              />
-              Get realtime insight of your business
-            </Text>
-            <Text sx={styles.listItem} as="p">
-              <Image
-                src={"/images/icons/check-circle-filled.png"}
-                alt="check icon"
-              />
-              Upscale your business operation using your data
-            </Text>
-            <Text sx={styles.listItem} as="p">
-              <Image
-                src={"/images/icons/check-circle-filled.png"}
-                alt="check icon"
-              />
-              Manage your inventory from anywhere
-            </Text>
-            <Box sx={styles.explore}>
-              <LearnMore path="/Contact/page" label="Contact Us" />
-            </Box>
+            <RightFade delay={500}>
+              <Text sx={styles.listItem} as="p">
+                <Image
+                  src={"/images/icons/check-circle-filled.png"}
+                  alt="check icon"
+                />
+                Get realtime insight of your business
+              </Text>
+            </RightFade>
+            <RightFade delay={700}>
+              <Text sx={styles.listItem} as="p">
+                <Image
+                  src={"/images/icons/check-circle-filled.png"}
+                  alt="check icon"
+                />
+                Upscale your business operation using your data
+              </Text>
+            </RightFade>
+            <RightFade delay={900}>
+              <Text sx={styles.listItem} as="p">
+                <Image
+                  src={"/images/icons/check-circle-filled.png"}
+                  alt="check icon"
+                />
+                Manage your inventory from anywhere
+              </Text>
+            </RightFade>
+            <RightFade delay={1100}>
+              <Box sx={styles.explore}>
+                <LearnMore path="/Contact/page" label="Contact Us" />
+              </Box>
+            </RightFade>
           </Box>
         </Box>
       </Container>
@@ -90,7 +119,7 @@ export default CleaningRules;
 
 const styles = {
   contentWrapper: {
-    mt: '5rem',
+    mt: "5rem",
     gap: [30, 30, 30, 30, 40, 60, 70, 120],
     display: ["flex", "flex", "grid"],
     flexDirection: ["column-reverse", "column-reverse", "unset"],

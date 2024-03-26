@@ -8,7 +8,7 @@ const Feature = ({ data, ...props }) => {
   return (
     <Box sx={styles.feature} {...props}>
       <Box as="figure">
-        <Image src={data?.icon} alt={data?.title} />
+        <Image src={data?.icon} alt={data?.title} width={129} height={120} />
       </Box>
       <Box>
         <Heading as="h4">{data?.title}</Heading>

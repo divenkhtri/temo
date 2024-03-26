@@ -4,6 +4,8 @@ import { Text, jsx } from "theme-ui";
 import { Container, Grid, Box } from "theme-ui";
 import FeatureCardColumn from "./feature-card-column.js";
 import SectionHeader from "../section-header.js";
+import HeadingFade from "../../animations/headingFade.js";
+import { Fade } from "react-awesome-reveal";
 
 const data = [
   {
@@ -48,7 +50,6 @@ const data = [
     title: "Instant gratification",
     text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
   },
-
 ];
 
 export default function KeyFeature() {
@@ -56,42 +57,55 @@ export default function KeyFeature() {
     <section sx={{ variant: "section.keyFeature" }} id="feature">
       <Container>
         <Box sx={{ mx: "auto", textAlign: "center", mb: 10 }}>
-          <Box>
+          <HeadingFade>
+            <Box>
+              <Text
+                sx={{
+                  color: "heading",
+                  fontWeight: [500, null, null, 700],
+                  fontSize: "42px",
+                  lineHeight: [1.33, 1.33, 2.08],
+                  letterSpacing: [null, null, null, "heading"],
+                }}
+              >
+                Our Promise
+              </Text>
+            </Box>
+          </HeadingFade>
+          <HeadingFade delay={500}>
             <Text
               sx={{
-                color: "heading",
-                fontWeight: [500, null, null, 700],
-                fontSize: "42px",
-                lineHeight: [1.33, 1.33, 2.08],
-                letterSpacing: [null, null, null, "heading"],
+                color: "primary",
+                fontWeight: 500,
+                fontSize: 3,
+                mb: 10,
               }}
             >
-              Our Promise
+              We help enterprises solve their toughest business challenges and
+              meet <br /> their top data and AI priorities with faster time to
+              value.
             </Text>
-          </Box>
-          <Text
-            sx={{
-              color: "primary",
-              fontWeight: 500,
-              fontSize: 3,
-              mb: 10,
-            }}
-          >
-            We help enterprises solve their toughest business challenges and
-            meet <br /> their top data and AI priorities with faster time to
-            value.
-          </Text>
+          </HeadingFade>
         </Box>
 
         <Grid sx={styles.grid}>
           {data.map((item) => (
-            <FeatureCardColumn
-              key={item.id}
-              src={item.imgSrc}
-              alt={item.title}
-              title={item.title}
-              text={item.text}
-            />
+            <Fade
+              delay={item * 700}
+              duration={1500}
+              direction="up"
+              cascade={true}
+              fraction={0}
+              triggerOnce={false}
+            >
+              <FeatureCardColumn
+                key={item.id}
+                src={item.imgSrc}
+                alt={item.title}
+                title={item.title}
+                text={item.text}
+              />
+            </Fade>
           ))}
         </Grid>
       </Container>

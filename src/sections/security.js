@@ -49,7 +49,7 @@ const Security = () => {
               <Box sx={styles.heading}>
                 <SectionHeading
                   title="Unbeatable privacy &amp; secure data storage"
-                  description="Our data centers have top-notch security and surveillance, with a reliable 99.9% uptime. Secure email hosting with encryption both at rest and end-to-end, along with S/MIME message encryption."
+                  description="We take data security our top priority & we provide 99.9% data security. With the help of Google Cloud Platform we protect your data from all sort of problem."
                 />
               </Box>
             </motion.div>

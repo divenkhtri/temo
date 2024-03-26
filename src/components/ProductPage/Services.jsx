@@ -1,11 +1,13 @@
 import { Box, Container } from "theme-ui";
 import SectionHeader from "../section-header";
 import Service from "../cards/service";
+import { Fade } from "react-awesome-reveal";
+import HeadingFade from "../../animations/headingFade";
 
 const services = [
   {
     title: "Data Ingestion",
-    description: "Efficiently collect and import data",
+    description: "Efficiently import data from any source",
   },
   {
     title: "Data Harmonization",
@@ -17,7 +19,7 @@ const services = [
   },
   {
     title: "Data Visualization",
-    description: "Present data insights through visuals",
+    description: "Present you data insights through visuals",
   },
   {
     title: "Action Analytics",
@@ -25,7 +27,7 @@ const services = [
   },
   {
     title: "Generative AI",
-    description: "Utilize AI to create novel content or solutions",
+    description: "Utilizing Gen-AI solution various operations",
   },
   {
     title: "Data Science & Machine Learning",
@@ -37,18 +39,28 @@ const services = [
   },
 ];
 
-
 const Services = () => {
   return (
     <Box as="section" id="services" sx={styles.section}>
       <Container>
-        <SectionHeader
-          title="Didn’t find what you were looking for?"
-          slogan="Here is a comprensive solution for your Operations"
-        />
+        <HeadingFade>
+          <SectionHeader
+            title="Didn’t find what you were looking for?"
+            slogan="Here is a comprensive solution for your Operations"
+          />
+        </HeadingFade>
         <Box sx={styles.grid}>
           {services.map((service, i) => (
-            <Service key={i} service={service} />
+            <Fade
+              delay={i * 100}
+              duration={1000}
+              direction="up"
+              cascade={true}
+              fraction={0}
+              triggerOnce={false}
+            >
+              <Service key={i} service={service} />
+            </Fade>
           ))}
         </Box>
       </Container>

@@ -1,11 +1,14 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { Fragment } from "react";
-import { jsx, Box, Container, Grid } from "theme-ui";
+import { jsx, Box, Container, Grid } from "theme-ui"; 
 import TrackVisibility from "react-on-screen";
 import SectionHeading from "../section-heading";
 import Service from "./components/service";
 import StatItem from "./components/stat-item";
+import HeadingFade from "../../animations/headingFade";
+import { Fade } from "react-awesome-reveal";
+
 const services = [
   {
     title: "Data Ingestion",
@@ -45,45 +48,39 @@ const data = {
   services: [
     {
       id: 1,
-      icon: "/images/services/1.png",
-      title: "Donate Blood",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/server.png",
+      title: "Data Ingestion",
+      desc: `Seamless integration with diverse data sources including databases, APIs, streaming platforms, and cloud storage.`,
     },
     {
       id: 2,
-      icon: "/images/services/2.png",
-      title: "Pledge for cause",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/cloud.png",
+      title: "Data Storage",
+      desc: `Scalable and secure data storage with support for both structured and unstructured data.`,
     },
     {
       id: 3,
-      icon: "/images/services/3.png",
-      title: "Life for a life",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/optimization.png",
+      title: "Data Processing",
+      desc: `Distributed processing capabilities using GCP tools for efficient data transformation and analysis.`,
     },
     {
       id: 4,
-      icon: "/images/services/4.png",
-      title: "Volunteer with us",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/analytics.png",
+      title: "Data Analytics & AI",
+      desc: `Advanced analytics and machine learning capabilities for gaining actionable insights and predictive analytics.`,
     },
     {
       id: 5,
-      icon: "/images/services/5.png",
-      title: "Partner with us",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/stats.png",
+      title: "Data Visualization",
+      desc: `Intuitive and interactive visualizations to explore and communicate data findings effectively.`,
     },
     {
       id: 6,
-      icon: "/images/services/6.png",
-      title: "Help us for educational",
-      desc: `Get your info tests delivered at home collect a sample from the your task.`,
-      link: "#",
+      icon: "/images/icons/data.png",
+      title: "Data Governance",
+      desc: `Robust data governance and security features to ensure compliance and data privacy.`,
     },
   ],
   stats: [
@@ -117,20 +114,61 @@ const AboutServices = () => {
   return (
     <Box as="section" id="services" sx={styles.section}>
       <Container>
-        <SectionHeading
-          slogan="Service we work for"
-          title="What care we do for your family"
-        />
+        <HeadingFade>
+          <Box>
+            <div
+              as="p"
+              sx={{ textAlign: "center", fontWeight: 900, letterSpacing: 10 }}
+            >
+              WORLD'S FIRST EVER
+            </div>
+            <div
+              sx={{
+                mb: "3rem",
+                textAlign: "center",
+                color: "#5567FF",
+                letterSpacing: 5,
+                fontWeight: 900,
+                fontSize: [4, null, 5, "7rem"],
+                lineHeight: 1.33,
+                fontFamily: "Comfortaa, sans-serif",
+                fontOpticalSizing: "auto",
+                fontStyle: "normal",
+              }}
+            >
+              data to output platform
+            </div>
+          </Box>
+          <SectionHeading title="We at RGS have a all-in-one platform for industry specific use case" />
+        </HeadingFade>
         <Grid sx={styles.serviceGrid}>
           {data.services.map((item) => (
-            <Service key={item.id} service={item} />
+            <Fade
+              delay={item * 700}
+              duration={1500}
+              direction="up"
+              cascade={true}
+              fraction={0}
+              triggerOnce={false}
+            >
+              <Service key={item.id} service={item} />
+            </Fade>
           ))}
         </Grid>
         <Grid sx={styles.statsGrid}>
           {data.stats.map((stat) => (
-            <TrackVisibility key={stat.id} once>
-              <StatItem stat={stat} />
-            </TrackVisibility>
+            <Fade
+              delay={stat * 700}
+              duration={1500}
+              direction="up"
+              cascade={true}
+              fraction={0}
+              triggerOnce={false}
+            >
+              <TrackVisibility key={stat.id} once>
+                <StatItem stat={stat} />
+              </TrackVisibility>
+            </Fade>
           ))}
         </Grid>
       </Container>
@@ -147,7 +185,8 @@ const styles = {
   },
   serviceGrid: {
     backgroundColor: "white",
-    boxShadow: "0px 0px 25px rgba(54, 91, 125, 0.04)",
+    mt: 10,
+    boxShadow: "0px 0px 25px rgba(54, 91, 125, 0.09)",
     borderRadius: 10,
     gap: [8, null, null, "60px 40px", "50px 30px", "60px 40px"],
     justifyContent: "center",
@@ -172,6 +211,6 @@ const styles = {
       "repeat(4, 130px)",
       "repeat(4, 150px)",
     ],
-    mt: [10],
+    my: [15],
   },
 };

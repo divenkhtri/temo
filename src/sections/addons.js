@@ -38,8 +38,8 @@ const Addons = () => {
               <Box>
                 <SectionHeading
                   sx={styles.heading}
-                  title="Integrated with the ultimate add-on management"
-                  description="Our data centers have top-notch security and surveillance, with a reliable 99.9% uptime. Secure email hosting with encryption both at rest and end-to-end, along with S/MIME message encryption."
+                  title="Integrated with the top data security compliance"
+                  description="Our data centers have top-notch security, with a reliable 99.9% uptime, our platform in integrated with Google Cloud Platform(GCP) to protect you data even when you are sleeping."
                 />
               </Box>
             </motion.div>

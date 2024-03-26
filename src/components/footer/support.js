@@ -16,7 +16,7 @@ export default function Support() {
             <SectionHeading
               sx={styles.heading}
               title="Meet our support team who always work hardly behind the scenes"
-              description="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred."
+              description="Focus only on the meaning, we take care of the data. As soon as the meeting end you can export in one click into your preferred."
             />
           </Box>
         </HeadingFade>

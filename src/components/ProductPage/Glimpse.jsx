@@ -1,34 +1,38 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import React from "react";
 import { jsx, Box, Container } from "theme-ui";
 import SectionHeading from "../section-heading";
 import Accordion from "./accordion/accordion";
+import LeftFade from "../../animations/leftFade";
+import { Fade } from "react-reveal";
+import HeadingFade from "../../animations/headingFade";
 
 const data = [
   {
-    title: "Organize your project content",
+    title: "We harmonize your data ",
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        Validate, Transform and bring your data in harmony to utilize it for
+        analtically process generating useful insights
       </div>
     ),
   },
   {
-    title: "Collaborate your documents easily",
+    title: "Get your data health report",
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        Monitor and Check your data quality report and how the data's quality
+        improves after using the platform
       </div>
     ),
   },
   {
-    title: `Build your team's knowledge base`,
+    title: `Easy to use platform`,
     contents: (
       <div>
-        Get your blood tests delivered at let collect sample from the victory of
-        the managements that supplies best design system guidelines ever.
+        With just one click you can generate your data insights, track realtime
+        data update and much more.
       </div>
     ),
   },
@@ -36,26 +40,28 @@ const data = [
 
 const Glimpse = () => {
   return (
-    <Box as="section" sx={styles.section}>
-      <Box
-        as="figure"
-        sx={{
-          ...styles.illustration,
-          background: `url(${"/images/homescreen.png"}) no-repeat`,
-        }}
-      />
-      <Container sx={styles.container}>
-        <Box sx={styles.accordionGroup}>
-          <SectionHeading
-            sx={styles.heading}
-            slogan="ALL-IN-ONE RGS Data PLATFORM"
-            title="Meet our premium features that will make you wow"
-            description="Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents."
-          />
-          <Accordion items={data} />
-        </Box>
-      </Container>
-    </Box>
+    <HeadingFade>
+      <Box as="section" sx={styles.section}>
+        <Box
+          as="figure"
+          sx={{
+            ...styles.illustration,
+            background: `url(${"/images/homescreen.png"}) no-repeat`,
+          }}
+        />
+        <Container sx={styles.container}>
+          <Box sx={styles.accordionGroup}>
+            <SectionHeading
+              sx={styles.heading}
+              slogan="ALL-IN-ONE RGS Data Platform"
+              title="Meet our premium features that will make you wow"
+              description="Build an incredible workplace and grow your business with RGS, the all-in-one platform for making data ready for analyticaly and Gen-AI process."
+            />
+            <Accordion items={data} />
+          </Box>
+        </Container>
+      </Box>
+    </HeadingFade>
   );
 };
 
@@ -63,7 +69,7 @@ export default Glimpse;
 
 const styles = {
   section: {
-    height: '100%',
+    height: "100%",
 
     mt: 10,
     pb: [12, null, null, null, null, 14, 18],

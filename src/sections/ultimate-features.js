@@ -7,37 +7,37 @@ import { Fade } from "react-awesome-reveal";
 const data = [
   {
     id: 1,
-    icon: "/images/icons/1.png",
+    icon: "/images/icons/server.png",
     title: "Data Ingestion",
     description: `Seamless integration with diverse data sources including databases, APIs, streaming platforms, and cloud storage.`,
   },
   {
     id: 2,
-    icon: "/images/icons/2.png",
+    icon: "/images/icons/cloud.png",
     title: "Data Storage",
     description: `Scalable and secure data storage with support for both structured and unstructured data.`,
   },
   {
     id: 3,
-    icon: "/images/icons/3.png",
+    icon: "/images/icons/optimization.png",
     title: "Data Processing",
     description: `Distributed processing capabilities using GCP tools for efficient data transformation and analysis.`,
   },
   {
     id: 4,
-    icon: "/images/icons/1.png",
+    icon: "/images/icons/analytics.png",
     title: "Data Analytics & AI",
     description: `Advanced analytics and machine learning capabilities for gaining actionable insights and predictive analytics.`,
   },
   {
     id: 5,
-    icon: "/images/icons/2.png",
+    icon: "/images/icons/stats.png",
     title: "Data Visualization",
     description: `Intuitive and interactive visualizations to explore and communicate data findings effectively.`,
   },
   {
     id: 6,
-    icon: "/images/icons/3.png",
+    icon: "/images/icons/data.png",
     title: "Data Governance",
     description: `Robust data governance and security features to ensure compliance and data privacy.`,
   },

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { jsx, Box, Container, Button } from "theme-ui";
 import SectionHeading from "../section-heading";
 import Image from "../image";
@@ -7,49 +7,76 @@ import { LearnMore } from "../link";
 
 import Modal, { CloseButton } from "../modal/modal";
 import ResponsiveIframe from "../responsive-iframe";
+import HeadingFade from "../../animations/headingFade";
+import Head from "next/head";
 
 const IntroVideo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box as="section" sx={{  marginTop: '5rem', marginBottom: '4rem' }} variant="section.introVideo">
+    <Box
+      as="section"
+      sx={{ marginTop: "15rem", marginBottom: "4rem" }}
+      variant="section.introVideo"
+    >
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="All in one platform for you day to day operation management"
-          description="Every email, web page, and social media post makes an impression on your customers. With our software you can be confident it's impression."
+          title={
+            <HeadingFade>
+              <Fragment>
+                All in one platform for you day to day operation management
+              </Fragment>
+            </HeadingFade>
+          }
+          description={
+            <HeadingFade delay={500}>
+              <Fragment>
+                From Ingesting a vast quantity of first-party user data to
+                generating a wealth of insights from that data, and train models
+                to respond to users’ needs and preferences. The RGS Data
+                Platform, the robustness and quality of data platform directly
+                impact the success and ability to drive powerful experiences for
+                your business and customers
+              </Fragment>
+            </HeadingFade>
+          }
         />
-        <Box sx={styles.explore}>
-          <LearnMore path="/Pricing/page" label="Check Pricing" />
-        </Box>
-        <Box sx={styles.videoWrapper}>
-          <Modal isOpen={isOpen}>
-            <CloseButton
-              onClick={() => setIsOpen(false)}
-              size="26px"
-              color="#000"
-            />
-            <ResponsiveIframe
-              src="https://storage.googleapis.com/rgs-tech-website-video-files/updated.mp4"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
-          </Modal>
+        <HeadingFade delay={700}>
+          <Box sx={styles.explore}>
+            <LearnMore path="/Pricing/page" label="Check Pricing Now" />
+          </Box>
+        </HeadingFade>
+        <HeadingFade delay={900}>
+          <Box sx={styles.videoWrapper}>
+            <Modal isOpen={isOpen}>
+              <CloseButton
+                onClick={() => setIsOpen(false)}
+                size="26px"
+                color="#000"
+              />
+              <ResponsiveIframe
+                src="https://storage.googleapis.com/rgs-tech-website-video-files/updated.mp4"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            </Modal>
 
-          <Image
-            src={"/images/videopic.png"}
-            className="video-banner"
-            alt="video banner"
-          />
-          <Button
-            variant="text"
-            sx={styles.playPause}
-            onClick={() => setIsOpen(true)}
-          >
-            <Image src={"/images/icons/play.png"} alt="play" />
-            Watch Full video
-          </Button>
-        </Box>
+            <Image
+              src={"/images/videopic.png"}
+              className="video-banner"
+              alt="video banner"
+            />
+            <Button
+              variant="text"
+              sx={styles.playPause}
+              onClick={() => setIsOpen(true)}
+            >
+              <Image src={"/images/icons/play.png"} alt="play" />
+              Watch Full video
+            </Button>
+          </Box>
+        </HeadingFade>
       </Container>
     </Box>
   );

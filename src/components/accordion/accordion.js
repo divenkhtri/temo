@@ -28,8 +28,8 @@ export default function Accordion({ items, ...props }) {
         <>
           {items.map((item, index) => (
             <Fade
-              delay={index * 200}
-              duration={1000}
+              delay={index * 50}
+              duration={500}
               direction="up"
               cascade={true}
               triggerOnce={true}
