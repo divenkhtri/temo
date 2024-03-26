@@ -74,7 +74,7 @@ const FAQ = () => {
             title="Frequently Ask Question"
             text="Ask your question and meet"
           />
-        </HeadingFade>{" "}
+        </HeadingFade>
         <Flex sx={styles.flex}>
           <Box sx={styles.faqWrapper}>
             <Accordion items={accordionData} />

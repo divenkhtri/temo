@@ -51,7 +51,7 @@ const HeroBanner = () => {
         />
         <Heading as="h2">All in one Data platform for all your Restaurent Management</Heading>
         <Image
-          src={"/images/banner/banne.gif"}
+          src={"/videos/Animation.gif"}
           sx={styles.bannerImage}
           alt="banner moc"
         />

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, Container, Button } from "theme-ui";
 import { useState } from "react";
-import Sticky from "react-stickynode";
+import Sticky from "react-stickynode"; 
 import { DrawerProvider } from "../../contexts/drawer/drawer-provider";
 import NavbarDrawer from "./navbar-drawer";
 import Logo from "../logo";
