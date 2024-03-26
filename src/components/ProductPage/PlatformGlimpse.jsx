@@ -120,7 +120,7 @@ const PlatformGlimpse = () => {
           </Box>
           <AnimatePresence initial={false} custom={direction}>
             <Box sx={styles.tabContent}>
-            {/* customer */}
+              {/* customer */}
               {tab.active === "budget" && (
                 <motion.div
                   custom={direction}
@@ -217,7 +217,7 @@ const PlatformGlimpse = () => {
                     opacity: { duration: 0.2 },
                   }}
                 >
-               <SectionHeader
+                  <SectionHeader
                     title="Manage Your Order Easily"
                     slogan="A comprehensive of 44+ key business KPI's for tracking you customer's orders, return items, tracks most profitable item and customer's peak dining time and much more. "
                   />
@@ -244,7 +244,7 @@ const PlatformGlimpse = () => {
                     opacity: { duration: 0.2 },
                   }}
                 >
-                <SectionHeader
+                  <SectionHeader
                     title="Check your data's health and quality"
                     slogan="Entire visualized monitorizing system to view your data quality & generate data report as per you need"
                   />
@@ -273,7 +273,7 @@ const styles = {
   featured: {
     my: 6,
     pt: ["80px", null, null, null, "80px", null, "40px"],
-    mb: "6rem",
+    mb: "20rem",
     backgroundColor: "#F9FAFC",
     height: "100vh",
   },
@@ -341,6 +341,7 @@ const styles = {
   },
   tabContent: {
     minHeight: ["190px", null, "300px", "385px", null, "600px"],
+    marginBottom: 10,
     position: "relative",
     "&::before": {
       content: "''",

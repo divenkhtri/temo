@@ -54,7 +54,7 @@ const Glimpse = () => {
             <SectionHeading
               sx={styles.heading}
               slogan="ALL-IN-ONE RGS Data Platform"
-              title="Meet our premium features that will make you wow"
+              title="Take a look at our premium features that will make you WOW"
               description="Build an incredible workplace and grow your business with RGS, the all-in-one platform for making data ready for analyticaly and Gen-AI process."
             />
             <Accordion items={data} />
