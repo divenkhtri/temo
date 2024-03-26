@@ -174,7 +174,7 @@ const Pricing = () => {
           <SectionHeading
             sx={styles.heading}
             slogan="Deal for your business"
-            title="Meet our pricing plan that suit you"
+            title="Pricing Plans designed to your needs ?"
           />
         </HeadingFade>
         <Box sx={styles.grid}>

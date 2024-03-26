@@ -45,8 +45,8 @@ const MobileApp = () => {
             >
               <Box sx={styles.heading}>
                 <SectionHeading
-                  title="Beyond on limitation with our android and iOS mobile application"
-                  description="Manage your business communications even when you're away from your desk. Native mobile apps for all data insights, order management and inventory management make staying in touch on the go easier and effortless."
+                  title="Work on the Go: Manage Your Business with Our Mobile App"
+                  description="Manage your business communications even when you're away from your desk. Native mobile apps for all data insights, order management and inventory management never losing touch even on the go."
                 />
               </Box>
             </motion.div>

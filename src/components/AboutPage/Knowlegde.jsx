@@ -7,9 +7,9 @@ import LeftFade from "../../animations/leftFade";
 import RightFade from "../../animations/rightFade";
 
 const data = {
-  title: "we are committed to using customized solution for our customers",
+  title: "We prioritize customization: Tailored solutions for our customers",
   description:
-    "At RGS, our core value is to satisfy our customer need with out customized solution. Get started with us today.",
+    "At RGS, our core value is to satisfy our customer needs with our customized solutions. Get started with us today.",
   btnName: "Schedule Meeting",
   btnURL: "/Contact/page",
 };
