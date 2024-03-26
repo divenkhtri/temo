@@ -152,7 +152,7 @@ const ContactForm = () => {
                   backgroundColor: "white",
                   p: [10, 11],
                   borderRadius: "40px",
-                  boxShadow: "0 20px 50px rgba(255, 255, 255, 0.6)",
+                  boxShadow: "0 20px 50px rgba(0, 0, 0, 0.3)",
                 }}
               >
                 <form>
