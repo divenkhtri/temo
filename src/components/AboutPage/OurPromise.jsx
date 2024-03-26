@@ -10,16 +10,16 @@ import { Fade } from "react-awesome-reveal";
 const data = [
   {
     id: 1,
-    imgSrc: "/images/key-feature/vector.svg",
-    altText: "High Quality Data",
-    title: "High Quality Data",
+    imgSrc: "/images/key-feature/speed.svg",
+    altText: "Quality",
+    title: "Cost efficient analytics",
     text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
   },
   {
     id: 2,
-    imgSrc: "/images/key-feature/speed.svg",
-    altText: "Quality",
-    title: "Cost efficient analytics",
+    imgSrc: "/images/key-feature/vector.svg",
+    altText: "High Quality Data",
+    title: "High Quality Data",
     text: "Get your blood tests delivered at home collect a sample from the your blood tests.",
   },
   {
