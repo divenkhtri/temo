@@ -14,10 +14,6 @@ export const footerNav = [
     label: 'About Us',
   },
   {
-    path: '/Pricing/page',
-    label: 'Plan & Pricing',
-  },
-  {
     path: '/Contact/page',
     label: 'Supports',
   },

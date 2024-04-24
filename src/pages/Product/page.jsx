@@ -36,10 +36,8 @@ const ProductPage = () => {
           <Services />
           <Glimpse />
           <CleaningRules />
-          <WorkFlow />
           <PlatformGlimpse/>
           <IntroVideo />
-          <Faq />
         </main>
         <Support />
         <Footer />

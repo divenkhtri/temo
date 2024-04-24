@@ -25,7 +25,7 @@ const ContactForm = () => {
         py: [4, 5, 6], // Responsive vertical padding
       }}
     >
-     <Box sx={{ width: "100%", maxWidth: "1200px" }}>
+     <Box sx={{ width: "100%", maxWidth: "1400px" }}>
         <Flex sx={{ flexDirection: ["column", "row"], mt: [4, "10rem"] }}>
           <Box sx={{ flex: 1, pr: [0, 10], mb: [4, 0] }}>
           <HeadingFade>

@@ -30,7 +30,6 @@ const IndexPage = () => {
         <UltimateFeatures />
         <TechUsed />
         <MobileApp />
-        <Pricing />
         <FAQ />
       </Layout>
     </ThemeUIProvider>

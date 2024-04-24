@@ -11,8 +11,4 @@ export default [
     path: '/About/page',
     label: 'About Us',
   },
-  {
-    path: '/Pricing/page',
-    label: 'Plan & Pricing',
-  },
 ];

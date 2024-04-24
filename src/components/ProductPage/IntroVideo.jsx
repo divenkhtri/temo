@@ -16,7 +16,6 @@ const IntroVideo = () => {
   return (
     <Box
       as="section"
-      sx={{ marginTop: "15rem", marginBottom: "4rem" }}
       variant="section.introVideo"
     >
       <Container>
@@ -42,11 +41,6 @@ const IntroVideo = () => {
             </HeadingFade>
           }
         />
-        <HeadingFade delay={700}>
-          <Box sx={styles.explore}>
-            <LearnMore path="/Pricing/page" label="Check Pricing Now" />
-          </Box>
-        </HeadingFade>
         <HeadingFade delay={900}>
           <Box sx={styles.videoWrapper}>
             <Modal isOpen={isOpen}>
@@ -89,9 +83,10 @@ const styles = {
     maxWidth: "auto",
     mb: [5],
     textAlign: "center",
-    fontSize: 4,
+    
     h1: {
       letterSpacing: "heading",
+      fontSize: 7,
     },
   },
   explore: {

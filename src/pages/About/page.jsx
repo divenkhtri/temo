@@ -34,7 +34,6 @@ const About = () => {
           <Knowledge />
           <KeyFeature />
           <TechStack />
-          <Faq />
         </main>
         <Support />
         <Footer />

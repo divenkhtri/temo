@@ -55,7 +55,7 @@ const styles = {
   title: {
     color: 'heading',
     fontWeight: [500, null, null, 700],
-    fontSize: [4, null, 5, 6],
+    fontSize: [4, null, 5, 14],
     lineHeight: [1.33, 1.33, 2.08],
     letterSpacing: [null, null, null, 'heading'],
 
@@ -68,10 +68,10 @@ const styles = {
   },
   description: {
     color: 'heading',
-    fontSize: ['14px', null, '16px'],
+    fontSize: ['14px', null, '22px  '],
     lineHeight: [1.86, null, 2.2],
     mt: [5],
-    maxWidth: 700,
+    maxWidth: 1000,
     m: ['10px auto 0'],
   },
   learnMore: {

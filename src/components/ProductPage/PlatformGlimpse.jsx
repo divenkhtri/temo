@@ -273,7 +273,7 @@ const styles = {
   featured: {
     my: 6,
     pt: ["80px", null, null, null, "80px", null, "40px"],
-    mb: "30rem",
+    mb: "20rem",
     backgroundColor: "#F9FAFC",
     height: "100vh",
   },
